@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All I Want for Christmas</title>
+  </head>
+  <body>
+    {% for giftlist in giftlists %} {{ giftlist.listName }}<br />
+    {{ giftlist.giftName }}<br />
+    {{ giftlist.whereToBuy }}<br />
+    {{ giftlist.cost }}<br />
+    {{ giftlist.link }}<br />
+    {% endfor %}
+  </body>
+</html>
