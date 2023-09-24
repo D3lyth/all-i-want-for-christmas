@@ -18,10 +18,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/giftLists")
-def get_giftLists():
-    giftLists = mongo.db.giftLists.find()
-    return render_template("giftlists.html", giftLists=giftLists)
+@app.route("/gift_lists")
+def get_gift_lists():
+    gift_lists = mongo.db.gift_lists.find()
+    return render_template("giftlists.html", gift_lists=gift_lists)
 
 
 if __name__ == "__main__":
