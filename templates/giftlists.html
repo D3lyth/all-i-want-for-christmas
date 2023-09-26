@@ -1,30 +1,20 @@
-{% extends "base.html" %} {% block content %} {% for gift_list in gift_lists %}
-{{ gift_list.list_name }}<br />
-{{ gift_list.gift_item }}<br />
-{{ gift_list.where_to_buy }}<br />
-{{ gift_list.cost }}<br />
-{{ gift_list.link }}<br />
-{% endfor %}
+{% extends "base.html" %} {% block content %}
 
 <ul class="collapsible">
+  {% for gift_list in gift_lists %}
   <li>
     <div class="collapsible-header white-text light-red darken-4 text-shadow">
-      <i class="fas fa-caret-down"></i>First
+      <i class="fas fa-caret-down"></i>
+      <strong>{{ gift_list.list_name }}</strong>
     </div>
-    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-  </li>
-  <li>
-    <div class="collapsible-header white-text light-red darken-4 text-shadow">
-      <i class="fas fa-caret-down"></i>Second
+    <div class="collapsible-body">
+      <strong>{{ gift_list.gift_item }}</strong>
+      <p>{{ gift_list.where_to_buy }}</p>
+      <p>{{ gift_list.cost }}</p>
+      <p><a>{{ gift_list.link }}</a></p>
     </div>
-    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
   </li>
-  <li>
-    <div class="collapsible-header white-text light-red darken-4 text-shadow">
-      <i class="fas fa-caret-down"></i>Third
-    </div>
-    <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-  </li>
+  {% endfor %}
 </ul>
 
 {% endblock %}
