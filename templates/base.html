@@ -43,7 +43,7 @@
                 >Profile</a
               >
             </li>
-            <li><a href="#">New Gift List</a></li>
+            <li><a href="{{ url_for('add_giftlist') }}">New Gift Item</a></li>
             <li><a href="#">Christmas Card List</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
@@ -68,7 +68,7 @@
             >Profile</a
           >
         </li>
-        <li><a href="#">New Gift List</a></li>
+        <li><a href="{{ url_for('add_giftlist') }}">New Gift Item</a></li>
         <li><a href="#">Christmas Card List</a></li>
         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
         {% else %}
