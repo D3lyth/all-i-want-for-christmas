@@ -8,6 +8,9 @@ from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
+import datetime
+import time
+
 
 app = Flask(__name__)
 
@@ -84,6 +87,7 @@ def profile(username):
         {"username": session["user"]})["username"]
     return render_template("profile.html", username=username)
 
+
 @app.route("/logout")
 def logout():
     # remove user from session cookie
@@ -92,9 +96,37 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_giftitem")
+@app.route("/add_giftitem", methods=["GET", "POST"])
 def add_giftitem():
-    return render_template("add_giftitem.html")
+    if request.method == "POST":
+        giftitem = {
+            "list_name": request.form.get("list_name"),
+            "gift_item": request.form.get("gift_item"),
+            "cost": request.form.get("cost"),
+            "where_to_buy": request.form.get("where_to_buy"),
+            "link": request.form.get("link")
+        }
+        mongo.db.tasks.insert_one(giftitem)
+        flash("Task Successfully Added")
+        return redirect(url_for("get_gift_lists"))
+
+    gift_lists = mongo.db.gift_lists.find().sort("list_name", 1)
+    return render_template("add_giftitem.html", gift_lists=gift_lists)
+
+
+
+
+# # Countdown to xmas timer
+
+
+# @app.route("/profile")
+# def countdown_to_christmas():
+#     # Calculate current time left
+#     target = datetime.datetime(2023, 12, 25)
+#     now = datetime.datetime.now()
+#     seconds = (target - now).total_seconds()
+
+#     return render_template('profile.html', seconds=seconds)
 
 
 if __name__ == "__main__":
