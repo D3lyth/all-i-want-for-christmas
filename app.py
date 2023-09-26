@@ -84,7 +84,7 @@ def profile(username):
         {"username": session["user"]})["username"]
     return render_template("profile.html", username=username)
 
-    @app.route("/logout")
+@app.route("/logout")
 def logout():
     # remove user from session cookie
     flash("You have been logged out")
