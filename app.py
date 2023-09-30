@@ -19,10 +19,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/gift_lists")
-def get_gift_lists():
-    gift_lists = mongo.db.gift_lists.find()
-    return render_template("giftlists.html", gift_lists=gift_lists)
+@app.route("/gifts")
+def get_gifts():
+    gifts = mongo.db.gifts.find()
+    return render_template("allgifts.html", gifts=gifts)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -93,26 +93,48 @@ def logout():
     return redirect(url_for("login"))
 
 
-@ app.route("/add_giftitem", methods=["GET", "POST"])
-def add_giftitem():
+@ app.route("/add_gift", methods=["GET", "POST"])
+def add_gift():
     if request.method == "POST":
-        giftitem={
+        gift = {
             "list_name": request.form.get("list_name"),
             "gift_item": request.form.get("gift_item"),
             "cost": request.form.get("cost"),
             "where_to_buy": request.form.get("where_to_buy"),
             "link": request.form.get("link")
         }
-        mongo.db.tasks.insert_one(giftitem)
-        flash("Task Successfully Added")
-        return redirect(url_for("get_gift_lists"))
+        mongo.db.gifts.insert_one(gift)
+        flash("Gift Successfully Added")
+        return redirect(url_for("get_gifts"))
 
-    gift_lists=mongo.db.gift_lists.find().sort("list_name", 1)
-    return render_template("add_giftitem.html", gift_lists=gift_lists)
+    gifts = mongo.db.gifts.find().sort("list_name", 1)
+    return render_template("add_gift.html", gifts=gifts)
 
 
+@app.route("/edit_gift/<gift_id>", methods=["GET", "POST"])
+def edit_gift(gift_id):
+    if request.method == "POST":
+        submit = {
+            "gift_item": request.form.get("gift_item"),
+            "list_name": request.form.get("list_name"),
+            "cost": request.form.get("cost"),
+            "where_to_buy": irequest.form.get("where_to_buy"),
+            "link": request.form.get("link"),
+        }
+
+    gift_item = mongo.db.gifts.find_one({"_id": ObjectId(gift_id)})
+    gift_item = mongo.db.gifts.find().sort("gift_item", 1)
+    return render_template("edit_gift.html", gifts=gifts, gift_item=gift_item)
+
+
+@app.route("/delete_gift/<gift_id>")
+def delete_gift(gift_id):
+    mongo.db.g.remove({"_id": ObjectId(gift_id)})
+    flash("Gift Successfully Deleted")
+    return redirect(url_for("get_gifts"))
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
+
