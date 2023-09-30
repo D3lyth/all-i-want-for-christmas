@@ -6,8 +6,8 @@
   <form
     class="col s12 m8 offset-m2"
     method="POST"
-    action="{{ url_for('login') }}"
-  >
+    action="{{ url_for('login') }}">
+    
     <div class="card-panel">
       <!-- username -->
       <div class="row">
@@ -26,6 +26,7 @@
           <label for="username">Username</label>
         </div>
       </div>
+
       <!-- password -->
       <div class="row">
         <div class="input-field col s12">
@@ -43,6 +44,7 @@
           <label for="password">Password</label>
         </div>
       </div>
+
       <!-- login -->
       <div class="row">
         <button
@@ -59,7 +61,7 @@
 <div class="row">
   <div class="col s12">
     <p class="center-align">
-      New Here?
+      No account?
       <a href="{{ url_for('register') }}" class="light-green-text text-darken-4"
         >Register Account</a
       >
