@@ -29,21 +29,21 @@
       <!-- top navbar -->
       <nav class="nav-extended text-shadow light-green darken-1">
         <div class="nav-wrapper">
-          <a href="{{ url_for('get_gift_lists') }}" class="brand-logo"
+          <a href="{{ url_for('get_gifts') }}" class="brand-logo"
             >All I Want For Christmas</a
           >
           <a href="#" data-target="mobile-demo" class="sidenav-trigger right"
             ><i class="fas fa-bars"></i
           ></a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="{{ url_for('get_gift_lists') }}">Gift Lists</a></li>
+            <li><a href="{{ url_for('get_gifts') }}">Gifts</a></li>
             {% if session.user %}
             <li>
               <a href="{{ url_for('profile', username=session['user']) }}"
                 >Profile</a
               >
             </li>
-            <li><a href="{{ url_for('add_giftitem') }}">New Gift Item</a></li>
+            <li><a href="{{ url_for('add_gift') }}">Add Gift</a></li>
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
             <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -60,14 +60,13 @@
             All I Want For Christmas
           </h4>
         </li>
-        <li><a href="{{ url_for('get_gift_lists') }}">Home</a></li>
+        <li><a href="{{ url_for('get_gifts') }}">Gifts</a></li>
         {% if session.user %}
         <li>
           <a href="{{ url_for('profile', username=session['user']) }}"
-            >Profile</a
-          >
+            >Profile</a>
         </li>
-        <li><a href="{{ url_for('add_giftitem') }}">New Gift Item</a></li>
+        <li><a href="{{ url_for('add_gift') }}">Add Gift</a></li>
         <li><a href="{{ url_for('logout') }}">Log Out</a></li>
         {% else %}
         <li><a href="{{ url_for('login') }}">Log In</a></li>
@@ -81,7 +80,7 @@
       {% with messages = get_flashed_messages() %} {% if messages %} {% for
       message in messages %}
       <div class="row flashes">
-        <h4 class="light-blue lighten-4 center-align">{{ message }}</h4>
+        <h4 class="light-greenlighten-4 center-align">{{ message }}</h4>
       </div>
       {% endfor %} {% endif %} {% endwith %}
     </section>
