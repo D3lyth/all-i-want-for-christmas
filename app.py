@@ -8,9 +8,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
 
-import datetime
-import time
-
 
 app = Flask(__name__)
 
@@ -96,10 +93,10 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_giftitem", methods=["GET", "POST"])
+@ app.route("/add_giftitem", methods=["GET", "POST"])
 def add_giftitem():
     if request.method == "POST":
-        giftitem = {
+        giftitem={
             "list_name": request.form.get("list_name"),
             "gift_item": request.form.get("gift_item"),
             "cost": request.form.get("cost"),
@@ -110,23 +107,9 @@ def add_giftitem():
         flash("Task Successfully Added")
         return redirect(url_for("get_gift_lists"))
 
-    gift_lists = mongo.db.gift_lists.find().sort("list_name", 1)
+    gift_lists=mongo.db.gift_lists.find().sort("list_name", 1)
     return render_template("add_giftitem.html", gift_lists=gift_lists)
 
-
-
-
-# # Countdown to xmas timer
-
-
-# @app.route("/profile")
-# def countdown_to_christmas():
-#     # Calculate current time left
-#     target = datetime.datetime(2023, 12, 25)
-#     now = datetime.datetime.now()
-#     seconds = (target - now).total_seconds()
-
-#     return render_template('profile.html', seconds=seconds)
 
 
 if __name__ == "__main__":
