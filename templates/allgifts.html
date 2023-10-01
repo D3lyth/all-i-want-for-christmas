@@ -12,7 +12,7 @@
             </div>
             <div class="col s12 m4">
                 <a href="{{ url_for('get_gifts') }}" class="red btn text-shadow">Reset</a>
-                <button type="submit" class="light-blue darken-1 btn text-shadow">
+                <button type="submit" class="light-green darken-1 btn text-shadow">
                     <i class="fas fa-search left"></i> Search
                 </button>
             </div>
@@ -25,7 +25,7 @@
 <ul class="collapsible">
   {% for gift in gifts %}
   <li>
-    <div class="collapsible-header white-text light-red darken-4 text-shadow">
+    <div class="collapsible-header red-text light-red darken-4 text-shadow">
       <div class="col s3">
         <i class="fas fa-caret-down"></i>
         {% if session.user|lower == gift.created_by|lower %}
