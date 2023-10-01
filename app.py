@@ -93,8 +93,7 @@ def profile(username):
     if session["user"]:
         return render_template("profile.html", username=username)
 
-    return redirect(url_for("login"))   
-    
+    return redirect(url_for("login"))
 
 @app.route("/logout")
 def logout():
@@ -112,7 +111,8 @@ def add_gift():
             "gift_item": request.form.get("gift_item"),
             "cost": request.form.get("cost"),
             "where_to_buy": request.form.get("where_to_buy"),
-            "link": request.form.get("link")
+            "link": request.form.get("link"),
+            "created_by": session["user"]
         }
         mongo.db.gifts.insert_one(gift)
         flash("Gift Successfully Added")
@@ -130,7 +130,8 @@ def edit_gift(gift_id):
                 "gift_item": request.form.get("gift_item"),
                 "cost": request.form.get("cost"),
                 "where_to_buy": request.form.get("where_to_buy"),
-                "link": request.form.get("link")
+                "link": request.form.get("link"),
+                "created_by": session["user"]
             }
 
         mongo.db.gifts.update({"_id": ObjectId(gift_id)}, submit)
