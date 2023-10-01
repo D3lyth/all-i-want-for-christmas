@@ -19,9 +19,16 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/gifts")
+@app.route("/get_gifts")
 def get_gifts():
-    gifts = mongo.db.gifts.find()
+    gifts = list(mongo.db.gifts.find())
+    return render_template("allgifts.html", gifts=gifts)
+
+
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    gifts = list(mongo.db.gifts.find({"$text": {"$search": query}}))
     return render_template("allgifts.html", gifts=gifts)
 
 
@@ -82,14 +89,18 @@ def profile(username):
     # grab the session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("profile.html", username=username)
 
+    if session["user"]:
+        return render_template("profile.html", username=username)
+
+    return redirect(url_for("login"))   
+    
 
 @app.route("/logout")
 def logout():
-    # remove user from session cookie
-    flash("You have been logged out")
-    session.pop("user")
+    if "user" in session:
+        session.pop("user")
+        flash("You have been logged out")
     return redirect(url_for("login"))
 
 
@@ -115,26 +126,29 @@ def add_gift():
 def edit_gift(gift_id):
     if request.method == "POST":
         submit = {
-            "gift_item": request.form.get("gift_item"),
-            "list_name": request.form.get("list_name"),
-            "cost": request.form.get("cost"),
-            "where_to_buy": irequest.form.get("where_to_buy"),
-            "link": request.form.get("link"),
-        }
+                "list_name": request.form.get("list_name"),
+                "gift_item": request.form.get("gift_item"),
+                "cost": request.form.get("cost"),
+                "where_to_buy": request.form.get("where_to_buy"),
+                "link": request.form.get("link")
+            }
 
+        mongo.db.gifts.update({"_id": ObjectId(gift_id)}, submit)
+        flash("Gift Successfully Updated")
+        
     gift_item = mongo.db.gifts.find_one({"_id": ObjectId(gift_id)})
-    gift_item = mongo.db.gifts.find().sort("gift_item", 1)
+    gifts = mongo.db.gifts.find().sort("list_name", 1)
     return render_template("edit_gift.html", gifts=gifts, gift_item=gift_item)
 
 
 @app.route("/delete_gift/<gift_id>")
 def delete_gift(gift_id):
-    mongo.db.g.remove({"_id": ObjectId(gift_id)})
+    mongo.db.gifts.remove({"_id": ObjectId(gift_id)})
     flash("Gift Successfully Deleted")
     return redirect(url_for("get_gifts"))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
             debug=True)
-
