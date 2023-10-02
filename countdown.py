@@ -1,5 +1,6 @@
 import datetime
 
+
 def christmas_countdown():
     # Get the current date and time
     now = datetime.datetime.now()
@@ -16,6 +17,7 @@ def christmas_countdown():
 
     # Print the countdown
     print(f"Time until Christmas: {time_until_christmas}")
+
 
 if __name__ == "__main__":
     christmas_countdown()
