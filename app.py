@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+import subprocess
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -148,6 +149,13 @@ def delete_gift(gift_id):
     mongo.db.gifts.remove({"_id": ObjectId(gift_id)})
     flash("Gift Successfully Deleted")
     return redirect(url_for("get_gifts"))
+
+
+@app.route('/update_running_total', methods=['GET'])
+def update_running_total():
+    # Run the dashboard.py script as a subprocess
+    subprocess.call(["python", "dashboard.py"])
+    return "Running total updated successfully."
 
 
 if __name__ == "__main__":
