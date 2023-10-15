@@ -40,18 +40,70 @@
 
 .xmaslights-image-container img {
     width: 33.33%;
-
     height: auto;
     /* Maintain aspect ratio */
     display: inline-block;
     vertical-align: top;
 }
 
-/* All Gifts page styling */
+/* Welcome Page Styling */
+
+/* Santa image */
+.santa-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-width: 20%;
+    height: auto;
+}
+
+.welcome-title {
+    text-align: center;
+}
+
+.welcome-login-text,
+.welcome-register-here {
+    font-family: 'Mountains of Christmas', serif;
+    color: navy;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* Center the buttons horizontally */
+.center-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+.register-button, .login-button {
+    text-align: center;
+}
+
+/* Add responsive styles for smaller screens (e.g., mobile) */
+@media screen and (max-width: 768px) {
+    .santa-image {
+        width: 100px;
+        /* Adjust the width as needed for mobile */
+        position: fixed;
+        /* Keeps the image in place while scrolling on mobile */
+        bottom: 10px;
+        /* Adjust the distance from the bottom as needed */
+        right: 10px;
+        /* Adjust the distance from the right as needed */
+    }
+}
+
+/* General page styling */
 
 .allgifts-title,
 .addgift-title,
-.profile.title {
+.profile.title,
+.register-title,
+.login-title,
+.welcome-title,
+.welcome-description {
     font-family: 'Just Me Again Down Here', cursive;
     color: navy;
     font-weight: bolder;
