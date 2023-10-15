@@ -4,6 +4,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from functools import wraps
+from countdown import christmas_countdown
 from bson.objectid import ObjectId
 import subprocess
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -79,6 +80,7 @@ def get_gifts():
     gifts = list(mongo.db.gifts.find({"created_by": user}))
     return render_template("allgifts.html", gifts=gifts)
 
+
 # Search decorator for search bar
 
 
@@ -127,6 +129,9 @@ def profile(username):
         gifts = list(mongo.db.gifts.find({"created_by": username}))
         return render_template("profile.html", user=user, gifts=gifts)
 
+        # Calculate the countdown values
+        countdown_values = christmas_countdown()
+
     # take the incorrect user to their own profile
     return redirect(url_for("profile", username=session["user"]))
 
@@ -135,7 +140,7 @@ def profile(username):
 @login_required
 def logout():
     if "user" in session:
-        session.pop("user")
+        session.pop("user")  # Remove the user from the session
         flash("You have been logged out")
     return redirect(url_for("login"))
 
@@ -144,7 +149,7 @@ def logout():
 @login_required
 def add_gift():
     if request.method == "POST":
-        gift = {
+        gift_to_add = {
             "list_name": request.form.get("list_name"),
             "gift_item": request.form.get("gift_item"),
             "cost": request.form.get("cost"),
@@ -152,7 +157,7 @@ def add_gift():
             "link": request.form.get("link"),
             "created_by": session["user"]
         }
-        mongo.db.gifts.insert_one(gift)
+        mongo.db.gifts.insert_one(gift_to_add)
         flash("Gift Successfully Added")
         return redirect(url_for("get_gifts"))
 
@@ -163,17 +168,16 @@ def add_gift():
 @app.route("/edit_gift/<gift_id>", methods=["GET", "POST"])
 @login_required
 def edit_gift(gift_id):
-
     # Find the gift, limiting to gifts created_by the current user
-    gift = mongo.db.gifts.find_one(
+    gift_to_edit = mongo.db.gifts.find_one(
         {"_id": ObjectId(gift_id), "created_by": session["user"]})
 
-    if gift:  # Gift was found
+    if gift_to_edit:  # Gift was found
 
         if request.method == "POST":
 
             # Build submission dict
-            submit = {
+            updated_gift = {
                 "list_name": request.form.get("list_name"),
                 "gift_item": request.form.get("gift_item"),
                 "cost": request.form.get("cost"),
@@ -183,21 +187,22 @@ def edit_gift(gift_id):
             }
 
             # Update gift in the database
-            mongo.db.gifts.update({"_id": ObjectId(gift_id)}, submit)
+            mongo.db.gifts.update({"_id": ObjectId(gift_id)}, updated_gift)
 
             # Get the updated gift item
-            updated_gift = mongo.db.gifts.find_one({"_id": ObjectId(gift_id)})
+            updated_gift_item = mongo.db.gifts.find_one(
+                {"_id": ObjectId(gift_id)})
 
             # Get all gifts by logged in user
             gifts = mongo.db.gifts.find(
                 {"created_by": session["user"]}).sort("list_name", 1)
 
             # Render the edit page with the gifts list and updated gift
-            return render_template("edit_gift.html", gifts=gifts, gift_item=updated_gift)
+            return render_template("edit_gift.html", gifts=gifts, gift_item=updated_gift_item)
 
         else:
-            # Initial GET request, render the edit page with the existing gift item
-            return render_template("edit_gift.html", gift_item=gift)
+            # Initial GET request, render the edit page with the existing gift
+            return render_template("edit_gift.html", gift_item=gift_to_edit)
 
     else:
         # No gift found for the current user, send an error
@@ -208,25 +213,18 @@ def edit_gift(gift_id):
 @app.route("/delete_gift/<gift_id>")
 @login_required
 def delete_gift(gift_id):
-    # find the task
-    gift = mongo.db.gifts.find_one({"_id": ObjectId(gift_id)})
-    if session["user"].lower() == gift["created_by"].lower():
-        # the session["user"] must be the user who created this gift
+    # find the gift
+    gift_to_delete = mongo.db.gifts.find_one({"_id": ObjectId(gift_id)})
+
+    if session["user"].lower() == gift_to_delete["created_by"].lower():
+        # The session["user"] is the user who created this gift
         mongo.db.gifts.delete_one({"_id": ObjectId(gift_id)})
+        flash("Gift Successfully Deleted")
+    else:
+        # Not the correct user to delete this gift
+        flash("You don't have access to delete this gift")
 
-    flash("Gift Successfully Deleted")
     return redirect(url_for("get_gifts"))
-
-# not the correct user to delete this gift
-    flash("You don't have access to delete this gift")
-    return redirect(url_for("get_gifts"))
-
-
-@app.route('/update_running_total', methods=['GET'])
-def update_running_total():
-    # Run the dashboard.py script as a subprocess
-    subprocess.call(["python", "dashboard.py"])
-    return "Running total updated successfully."
 
 
 if __name__ == "__main__":
