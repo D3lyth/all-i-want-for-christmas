@@ -1,24 +1,44 @@
 {% extends "base.html" %} {% block content %}
+
 <div class="row">
   <div class="col s12 m8 offset-m2">
     <div class="card-panel">
-      <h3 class="center-align light-green-text text-darken-4">
-        {{ username }}'s Christmas Gifts
-      </h3>
-
-      <!-- Countdown timer -->
-      <div class="center-align">
-        <h4>Time Until Christmas:</h4>
-        <div id="countdown"></div>
-      </div>
-
-      <!-- Running total -->
-      <div class="center-align">
-        <h4>Gifts to Buy:</h4>
-        <div id="running-total"></div>
+        <img src="{{ url_for('static', filename='images/snowcap.png') }}" alt="snowcapped card" class="snowcap-image">
+      <h3 class="profile-title">
+        {{ user.username }}'s Christmas Gifts
+      </h3> 
       </div>
     </div>
   </div>
+</div>
+
+<div class="start-adding-gifts">
+    <a href="add_gift.html">
+        <button type="submit">Start adding your gifts!</button>
+    </a>
+</div>
+
+<!-- Countdown timer -->
+<div class="center-align">
+    <h4 class="timer-title">Time Until Christmas:</h4>
+    <div id="countdown">
+        <div class="countdown-tile">
+            <div class="number">{{ days }}</div>
+            <div class="text">Days</div>
+        </div>
+        <div class="countdown-tile">
+            <div class="number">{{ hours }}</div>
+            <div class="text">Hrs</div>
+        </div>
+        <div class="countdown-tile">
+            <div class="number">{{ minutes }}</div>
+            <div class="text">Minutes</div>
+        </div>
+        <div class="countdown-tile">
+            <div class="number">{{ seconds }}</div>
+            <div class="text">Seconds</div>
+        </div>
+    </div>
 </div>
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
