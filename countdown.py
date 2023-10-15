@@ -15,8 +15,21 @@ def christmas_countdown():
     # Calculate the time remaining until Christmas
     time_until_christmas = christmas - now
 
-    # Print the countdown
-    print(f"Time until Christmas: {time_until_christmas}")
+    # Extract days, hours, minutes, and seconds
+    days = time_until_christmas.days
+    seconds = time_until_christmas.seconds
+    hours, seconds = divmod(seconds, 3600)
+    minutes, seconds = divmod(seconds, 60)
+
+    # Create a dictionary to store the countdown values
+    countdown_values = {
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+    }
+
+    return countdown_values
 
 
 if __name__ == "__main__":
