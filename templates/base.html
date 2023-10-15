@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Just+Me+Again+Down+Here&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
@@ -15,11 +21,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
       type="text/css"
     />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename='css/style.css') }}"
-      type="text/css"
-    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}" type="text/css" />
+
     {% block styles %} {% endblock %}
     <title>All I Want for Christmas</title>
   </head>
@@ -30,14 +33,22 @@
       <nav class="nav-extended text-shadow light-green darken-1">
         <div class="nav-wrapper">
           <a href="{{ url_for('welcome') }}" class="brand-logo"
-            >All I Want For Christmas</a
+            ><img
+              src="/static/images/santa-hat.png"
+              alt="Santa Hat"
+              class="santa-hat"
+            />All I Want For Christmas</a
           >
           <a href="#" data-target="mobile-demo" class="sidenav-trigger right"
             ><i class="fas fa-bars"></i
           ></a>
           <ul class="right hide-on-med-and-down">
             {% if session.user %}
-            <li><a href="{{ url_for('profile', username=session['user']) }}">Dashboard</a></li>
+            <li>
+              <a href="{{ url_for('profile', username=session['user']) }}"
+                >Profile</a
+              >
+            </li>
             <li><a href="{{ url_for('get_gifts') }}">Gifts</a></li>
             <li><a href="{{ url_for('add_gift') }}">Add Gift</a></li>
             <li><a href="{{ url_for('login') }}">Log Out</a></li>
@@ -57,7 +68,11 @@
           </h4>
         </li>
         {% if session.user %}
-        <li><a href="{{ url_for('profile', username=session['user']) }}">Dashboard</a></li>
+        <li>
+          <a href="{{ url_for('profile', username=session['user']) }}"
+            >Profile</a
+          >
+        </li>
         <li><a href="{{ url_for('get_gifts') }}">Gifts</a></li>
         <li><a href="{{ url_for('add_gift') }}">Add Gift</a></li>
         <li><a href="{{ url_for('login') }}">Log Out</a></li>
@@ -67,6 +82,27 @@
         {% endif %}
       </ul>
     </header>
+
+    <div class="xmaslights-image-container">
+      <img
+        class="xmaslights"
+        id="xmaslights"
+        alt="xmas string lights"
+        src="/static/images/xmaslights.png"
+      />
+      <img
+        class="xmaslights"
+        id="xmaslights"
+        alt="xmas string lights"
+        src="/static/images/xmaslights.png"
+      />
+      <img
+        class="xmaslights"
+        id="xmaslights"
+        alt="xmas string lights"
+        src="/static/images/xmaslights.png"
+      />
+    </div>
 
     <section>
       <!-- flash messages -->
