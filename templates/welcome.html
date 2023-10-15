@@ -1,17 +1,16 @@
 {% extends "base.html" %} {% block content %}
 
-<h1>Welcome to All I Want For Christmas</h1>
-<h2>Where you can keep track of your gifts as well as Santa!<h2>
+<h1 class="welcome-title">Welcome to <br> All I Want For Christmas</h1>
+<h2 class="welcome-description">Where you can keep track of your gifts as well as Santa!<h2>
 
     <!-- login -->
-    <h3>Login below to access your existing gift lists</h3>
-      <div class="row">
-        <a href="{{ url_for('login') }}" class="light-green-text text-darken-4"
-        >
+    <h3 class="welcome-login-text">Login below to access your existing gift lists</h3>
+    <div class="row center-buttons">
+        <a href="{{ url_for('login') }}">
         <button
           type="submit"
-          class="col s12 btn-large light-green darken-4 text-shadow">
-          Log In <i class="fas fa-sign-in-alt"></i>
+          class="login-button">
+          Log In
         </button>
     </a>
       </div>
@@ -19,18 +18,20 @@
   </form>
 </div>
 
-<h3>No account yet? Register here!</h3>
-<div class="row">
-    <a href="{{ url_for('register') }}" class="light-green-text text-darken-4"
-        ><button
+<h3 class="welcome-register-here">No account yet? Register here!</h3>
+<div class="row center-buttons">
+    <a href="{{ url_for('register') }}"><button
           type="submit"
-          class="col s12 btn-large light-green darken-4 text-shadow">
-          Register <i class="fas fa-sign-in-alt"></i>
+          class="register-button">
+          Register 
         </button>
     </a>
       </div>
     </div>
   </form>
 </div>
+
+<!-- Santa Image -->
+<img src="/static/images/santa.png" alt="Santa" class="santa-image">
 
 {% endblock %}
