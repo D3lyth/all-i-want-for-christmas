@@ -56,9 +56,9 @@
             </li>
             <li><a href="{{ url_for('get_gifts') }}">Gifts</a></li>
             <li><a href="{{ url_for('add_gift') }}">Add Gift</a></li>
-            <li><a href="{{ url_for('login') }}">Log Out</a></li>
+            <li><a href="{{ url_for('profile_login') }}">Log Out</a></li>
             {% else %}
-            <li><a href="{{ url_for('login') }}">Log In</a></li>
+            <li><a href="{{ url_for('profile_login') }}">Log In</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
           </ul>
@@ -80,9 +80,9 @@
         </li>
         <li><a href="{{ url_for('get_gifts') }}">Gifts</a></li>
         <li><a href="{{ url_for('add_gift') }}">Add Gift</a></li>
-        <li><a href="{{ url_for('login') }}">Log Out</a></li>
+        <li><a href="{{ url_for('profile_login') }}">Log Out</a></li>
         {% else %}
-        <li><a href="{{ url_for('login') }}">Log In</a></li>
+        <li><a href="{{ url_for('profile_login') }}">Log In</a></li>
         <li><a href="{{ url_for('register') }}">Register</a></li>
         {% endif %}
       </ul>

@@ -6,7 +6,6 @@ from flask_pymongo import PyMongo
 from functools import wraps
 from countdown import christmas_countdown
 from bson.objectid import ObjectId
-import subprocess
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -42,8 +41,8 @@ def welcome():
 # Login decorator
 
 
-@app.route("/login", methods=["GET", "POST"])
-def login():
+@app.route("/profile_login", methods=["GET", "POST"])
+def profile_login():
     if "user" not in session:
         # only if there isn't a current session["user"]
         if request.method == "POST":
@@ -51,24 +50,29 @@ def login():
             existing_user = mongo.db.users.find_one(
                 {"username": request.form.get("username").lower()})
 
-        if existing_user:
-            # ensure hashed password matches user input
-            if check_password_hash(
+            if existing_user:
+                # ensure hashed password matches user input
+                if check_password_hash(
                     existing_user["password"], request.form.get("password")):
-                session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(request.form.get("username")))
-                return redirect(url_for("profile", username=session["user"]))
+                    session["user"] = request.form.get("username").lower()
+                    flash("Welcome, {}".format(
+                        request.form.get("username")))
+                    return redirect(url_for(
+                        "profile", username=session["user"]))
+                else:
+                    # invalid password match
+                    flash("Incorrect Username and/or Password")
+                    return redirect(url_for("profile_login"))
+
             else:
-                # invalid password match
+                # username doesn't exist
                 flash("Incorrect Username and/or Password")
-                return redirect(url_for("login"))
+                return redirect(url_for("profile_login"))
 
-        else:
-            # username doesn't exist
-            flash("Incorrect Username and/or Password")
-            return redirect(url_for("login"))
+        return render_template("profile_login.html")
 
-    return render_template("login.html")
+    # user is already logged-in, direct them to their profile
+    return redirect(url_for("profile", username=session["user"]))
 
 # Get Gifts decorator - to show all gifts
 
@@ -87,6 +91,7 @@ def get_gifts():
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
+    user = session["user"]
     gifts = list(mongo.db.gifts.find({"$text": {"$search": query}}))
     return render_template("allgifts.html", gifts=gifts)
 
@@ -142,7 +147,7 @@ def logout():
     if "user" in session:
         session.pop("user")  # Remove the user from the session
         flash("You have been logged out")
-    return redirect(url_for("login"))
+    return redirect(url_for("welcome"))
 
 
 @ app.route("/add_gift", methods=["GET", "POST"])
@@ -198,7 +203,8 @@ def edit_gift(gift_id):
                 {"created_by": session["user"]}).sort("list_name", 1)
 
             # Render the edit page with the gifts list and updated gift
-            return render_template("edit_gift.html", gifts=gifts, gift_item=updated_gift_item)
+            return render_template("edit_gift.html", gifts=gifts, 
+            gift_item=updated_gift_item)
 
         else:
             # Initial GET request, render the edit page with the existing gift
