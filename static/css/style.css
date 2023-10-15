@@ -14,3 +14,118 @@
     margin: 5px;
     line-height: 42px;
 }
+
+/* Logo */
+
+.brand-logo {
+    font-family: 'Delicious Handrawn', cursive;
+    margin-left: 30px;
+    top: 5px;
+}
+
+.santa-hat {
+    position: absolute;
+    top: 1px;
+    right: 240px;
+    width: 40px;
+}
+
+/* All pages styling */
+/* Xmas Lights */
+.xmaslights-image-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.xmaslights-image-container img {
+    width: 33.33%;
+
+    height: auto;
+    /* Maintain aspect ratio */
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* All Gifts page styling */
+
+.allgifts-title,
+.addgift-title,
+.profile.title {
+    font-family: 'Just Me Again Down Here', cursive;
+    color: navy;
+    font-weight: bolder;
+
+}
+
+/* Profile Page styling */
+
+.card-panel {
+    position: relative;
+    margin-top: 70px;
+    padding-top: 30px;
+}
+
+.snowcap-image {
+    position: absolute;
+    top: -20px;
+    left: -15px;
+    /* Adjust left position as needed */
+    width: 110%;
+    /* Adjust the size as needed */
+    height: 50%;
+}
+
+.profile-title {
+    font-family: 'Just Me Again Down Here', cursive;
+    color: navy;
+    text-align: center;
+    margin: 10px;
+}
+
+/* Countdown timer styling */
+
+h4 {
+    margin: 50px;
+}
+
+/* Countdown Tiles Styles */
+.countdown-tile {
+    text-align: center;
+    display: inline-block;
+    margin: 0 10px;
+    /* Adjust the margin as needed */
+    padding: 10px;
+    /* Adjust the padding as needed */
+    background-color: darkred;
+    /* Set the background color to dark red */
+    border: 2px solid red;
+    /* Adjust the border color as needed */
+    border-radius: 5px;
+    /* Adjust the border radius as needed */
+    color: white;
+    /* Set the font color to white */
+    font-size: 1.5rem;
+    /* Adjust the font size as needed */
+}
+
+.number {
+    font-size: 2rem;
+    /* Adjust the font size as needed */
+}
+
+.text {
+    font-size: 1rem;
+    /* Adjust the font size as needed */
+}
+
+/* Center-align the countdown tiles container */
+#countdown {
+    text-align: center;
+}
+
+/* Define the style for the "Time Until Christmas" header */
+#countdown-header {
+    font-size: 1.5rem;
+    /* Adjust the font size as needed */
+}
