@@ -1,53 +1,71 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
-<h3 class="light-green-text text-darken-4 center-align">All Gifts</h3>
+<h3 class="text-darken-4 center-align allgifts-title">All Gifts</h3>
 
 <div class="row card-panel grey lighten-5">
-    <form action="{{ url_for('search') }}" method="post" class="col s12">
-        <div class="row valign-wrapper center-align">
-            <div class="input-field col s12 m8">
-                <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
-                <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                <label for="query">Search Gifts</label>
-            </div>
-            <div class="col s12 m4">
-                <a href="{{ url_for('get_gifts') }}" class="red btn text-shadow">Reset</a>
-                <button type="submit" class="light-green darken-1 btn text-shadow">
-                    <i class="fas fa-search left"></i> Search
-                </button>
-            </div>
-        </div>
-    </form>
+  <form action="{{ url_for('search') }}" method="post" class="col s12">
+    <div class="row valign-wrapper center-align">
+      <div class="input-field col s12 m8">
+        <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+        <input
+          type="text"
+          name="query"
+          id="query"
+          minlength="3"
+          class="validate"
+          required
+        />
+        <label for="query">Search Gifts</label>
+      </div>
+      <div class="col s12 m4">
+        <a href="{{ url_for('get_gifts') }}" class="red btn text-shadow"
+          >Reset</a
+        >
+        <button type="submit" class="light-green darken-1 btn text-shadow">
+          <i class="fas fa-search left"></i> Search
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
 
 {% if gifts|length > 0 %}
 <ul class="collapsible">
-    {% for gift in gifts %}
-    <li>
-        <div class="collapsible-header darkgreen-text light-red darken-4 text-shadow">
-            <div class="col s3">
-                <i class="fas fa-caret-down"></i>
-                {% if session.user|lower == gift.created_by|lower %}
-                <a href="{{ url_for('delete_gift', gift_id=gift._id) }}" class="btn-small green accent-4">Delete</a>
-                <a href="{{ url_for('edit_gift', gift_id=gift._id) }}" class="btn-small light-blue lighten-1">Edit</a>
-                {% endif %}
-            </div>
-            <div class="col s9">
-                <strong>Item: {{ gift.gift_item }}</strong>
-            </div>
-        </div>
-        <div class="collapsible-body">
-            <strong>For: {{ gift.list_name }}</strong>
-            <p>Where to Buy: {{ gift.where_to_buy }}</p>
-            <p>Cost: {{ gift.cost }}</p>
-            <p>Link: <a href="{{ gift.link }}">{{ gift.link }}</a></p>
-        </div>
-    </li>
-    {% endfor %}
+  {% for gift in gifts %}
+  <li>
+    <div
+      class="collapsible-header darkgreen-text light-red darken-4 text-shadow"
+    >
+      <div class="col s3">
+        <i class="fas fa-caret-down"></i>
+        {% if session.user|lower == gift.created_by|lower %}
+        <a
+          href="{{ url_for('delete_gift', gift_id=gift._id) }}"
+          class="btn-small light-pink lighten-1"
+          >Delete</a
+        >
+        <a
+          href="{{ url_for('edit_gift', gift_id=gift._id) }}"
+          class="btn-small light-blue lighten-1"
+          >Edit</a>
+          
+        <!-- inject the modals partials-template -->
+        {% include "partials/modals.html" %} {% endif %}
+      </div>
+
+      <div class="col s9">
+        <strong>Item: {{ gift.gift_item }}</strong>
+      </div>
+    </div>
+    <div class="collapsible-body">
+      <strong>For: {{ gift.list_name }}</strong>
+      <p>Where to Buy: {{ gift.where_to_buy }}</p>
+      <p>Cost: {{ gift.cost }}</p>
+      <p>Link: <a href="{{ gift.link }}">{{ gift.link }}</a></p>
+    </div>
+  </li>
+  {% endfor %}
 </ul>
 {% else %}
 <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
-{% endif %}
-
-{% endblock %}
+{% endif %} {% endblock %}
