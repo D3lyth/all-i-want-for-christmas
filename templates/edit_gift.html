@@ -6,8 +6,8 @@
   <form
     class="col s12"
     method="POST"
-    action="{{ url_for('edit_gift', gift_id=gift._id) }}"
-  >
+    action="{{ url_for('edit_gift', gift_id=gifts._id) }}">
+
     <!-- Gift Item -->
     <div class="row">
       <div class="input-field col s12">
@@ -15,7 +15,7 @@
         <select id="gift_id" name="gift_item" class="validate" required>
           <option value="" disabled selected>Choose Gift</option>
           {% for gift in gifts %}
-          <option value="{{ gift.gift_item }}">{{ gifts.gift_item }}</option>
+          <option value="{{ gift.gift_item }}">{{ gift.gift_item }}</option>
           {% endfor %}
         </select>
 
@@ -36,7 +36,7 @@
           class="validate"
           required
         />
-        <label for="list_name">List Name</label>
+        <label for="list_name">For</label>
       </div>
     </div>
 
