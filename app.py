@@ -53,7 +53,7 @@ def profile_login():
             if existing_user:
                 # ensure hashed password matches user input
                 if check_password_hash(
-                    existing_user["password"], request.form.get("password")):
+                        existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     flash("Welcome, {}".format(
                         request.form.get("username")))
@@ -138,15 +138,18 @@ def profile(username):
         countdown_values = christmas_countdown()
 
     # take the incorrect user to their own profile
-    return redirect(url_for("profile", username=session["user"]))
+    return redirect(url_for("welcome", username=session["user"]))
 
 
-@app.route("/logout")
+@app.route("/profile_logout")
 @login_required
-def logout():
+def profile_logout():
     if "user" in session:
         session.pop("user")  # Remove the user from the session
         flash("You have been logged out")
+    else:
+        # Handle the case when the user is not in the session
+        flash("You are not logged in")
     return redirect(url_for("welcome"))
 
 
@@ -177,6 +180,8 @@ def edit_gift(gift_id):
     gift_to_edit = mongo.db.gifts.find_one(
         {"_id": ObjectId(gift_id), "created_by": session["user"]})
 
+    print(gift_to_edit)
+
     if gift_to_edit:  # Gift was found
 
         if request.method == "POST":
@@ -196,15 +201,15 @@ def edit_gift(gift_id):
 
             # Get the updated gift item
             updated_gift_item = mongo.db.gifts.find_one(
-                {"_id": ObjectId(gift_id)})
+                {"_id": ObjectId(gift_id)}, updated_gift)
 
             # Get all gifts by logged in user
             gifts = mongo.db.gifts.find(
                 {"created_by": session["user"]}).sort("list_name", 1)
 
             # Render the edit page with the gifts list and updated gift
-            return render_template("edit_gift.html", gifts=gifts, 
-            gift_item=updated_gift_item)
+            return render_template("edit_gift.html", gifts=gifts,
+                                   gift_item=updated_gift_item)
 
         else:
             # Initial GET request, render the edit page with the existing gift
