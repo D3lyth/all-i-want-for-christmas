@@ -41,6 +41,16 @@
     </div>
 </div>
 
+<h4>Bought Gifts</h4>
+<ul>
+    {% for gift in gifts %}
+    {% if gift.bought %}
+    <li>{{ gift.gift_item }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+
+
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 <script src="{{ url_for('static', filename='js/countdown.js') }}"></script>
 {% endblock %}
