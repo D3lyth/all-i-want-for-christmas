@@ -57,11 +57,14 @@
             <p>Where to Buy: {{ gift.where_to_buy }}</p>
             <p>Cost: {{ gift.cost }}</p>
             <p>Link: <a href="{{ gift.link }}">{{ gift.link }}</a></p>
+            <a href="{{ url_for('undo_bought', gift_id=gift._id) }}"
+                class="waves-effect waves-light btn undo-button">Undo</a>
         </div>
     </li>
     {% endif %}
     {% endfor %}
 </ul>
+
 
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 <script src="{{ url_for('static', filename='js/countdown.js') }}"></script>
