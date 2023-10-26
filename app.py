@@ -180,39 +180,20 @@ def edit_gift(gift_id):
     gift_to_edit = mongo.db.gifts.find_one(
         {"_id": ObjectId(gift_id), "created_by": session["user"]})
 
-    print(gift_to_edit)
-
-    if gift_to_edit:  # Gift was found
-
+    if gift_to_edit:
         if request.method == "POST":
-
-            # Build submission dict
+            # Update the gift details based on the form input
             updated_gift = {
                 "list_name": request.form.get("list_name"),
-                "gift_item": request.form.get("gift_item"),
                 "cost": request.form.get("cost"),
-                "where_to_buy": request.form.get("where_to_buy"),
-                "link": request.form.get("link"),
-                "created_by": session["user"]
             }
-
-            # Update gift in the database
-            mongo.db.gifts.update({"_id": ObjectId(gift_id)}, updated_gift)
-
-            # Get the updated gift item
-            updated_gift_item = mongo.db.gifts.find_one(
-                {"_id": ObjectId(gift_id)}, updated_gift)
-
-            # Get all gifts by logged in user
-            gifts = mongo.db.gifts.find(
-                {"created_by": session["user"]}).sort("list_name", 1)
-
-            # Render the edit page with the gifts list and updated gift
-            return render_template("edit_gift.html", gifts=gifts,
-                                   gift_item=updated_gift_item)
-
+            # Update the gift in the database
+            mongo.db.gifts.update_one({"_id": ObjectId(gift_id)}, {
+                                      "$set": updated_gift})
+            # Redirect to the view of the updated gift
+            return redirect(url_for("get_gifts"))
         else:
-            # Initial GET request, render the edit page with the existing gift
+            # Render the edit page with the existing gift details
             return render_template("edit_gift.html", gift_item=gift_to_edit)
 
     else:
@@ -234,6 +215,22 @@ def delete_gift(gift_id):
     else:
         # Not the correct user to delete this gift
         flash("You don't have access to delete this gift")
+
+    return redirect(url_for("get_gifts"))
+
+
+@app.route("/mark_as_bought/<gift_id>")
+@login_required
+def mark_as_bought(gift_id):
+    # Find the gift, ensuring it was created by the current user
+    gift = mongo.db.gifts.find_one(
+        {"_id": ObjectId(gift_id), "created_by": session["user"]})
+
+    if gift:
+        # Update the 'bought' field to True
+        mongo.db.gifts.update_one({"_id": ObjectId(gift_id)}, {
+                                  "$set": {"bought": True}})
+        flash("Item marked as bought")
 
     return redirect(url_for("get_gifts"))
 
