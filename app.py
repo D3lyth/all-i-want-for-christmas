@@ -251,7 +251,6 @@ def undo_bought(gift_id):
     return redirect(url_for("get_gifts"))
 
 
-
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
