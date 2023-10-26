@@ -55,19 +55,3 @@ document.addEventListener('DOMContentLoaded', function () {
     let selects = document.querySelectorAll("select");
     let selectsInstance = M.FormSelect.init(selects);
 });
-
-
-
-
-// Function to fetch and display the running total
-function updateRunningTotal() {
-    fetch('/get_running_total')  // Replace with the appropriate Flask route
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('running-total').textContent = `Total: $${data.total}`;
-        })
-        .catch(error => console.error('Error:', error));
-}
-
-// Call the function to update the running total when the page loads
-window.addEventListener('load', updateRunningTotal);
