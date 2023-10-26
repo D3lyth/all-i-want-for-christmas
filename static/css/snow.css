@@ -1,0 +1,36 @@
+/* snow.css */
+
+.snow-container {
+    animation: snow 10s linear infinite;
+    background: transparent;
+    background-image: url("/static/images/snowflake.jpeg");
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.snowflake {
+    position: absolute;
+    background: pink;
+    /* or the snowflake image */
+    width: 10px;
+    /* Adjust size as needed */
+    height: 10px;
+    /* Adjust size as needed */
+    border-radius: 50%;
+    /* Makes it round for a simple snowflake effect */
+}
+
+@keyframes snow {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
