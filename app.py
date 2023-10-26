@@ -235,6 +235,23 @@ def mark_as_bought(gift_id):
     return redirect(url_for("get_gifts"))
 
 
+@app.route("/undo_bought/<gift_id>")
+@login_required
+def undo_bought(gift_id):
+    # Find the gift, ensuring it was created by the current user
+    gift = mongo.db.gifts.find_one(
+        {"_id": ObjectId(gift_id), "created_by": session["user"]})
+
+    if gift:
+        # Update the 'bought' field to False
+        mongo.db.gifts.update_one({"_id": ObjectId(gift_id)}, {
+            "$set": {"bought": False}})
+        flash("Item marked as not bought")
+
+    return redirect(url_for("get_gifts"))
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
