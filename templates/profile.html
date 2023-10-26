@@ -54,9 +54,7 @@
         </div>
         <div class="collapsible-body">
             <p>For: {{ gift.list_name }}</p>
-            <p>Where to Buy: {{ gift.where_to_buy }}</p>
             <p>Cost: {{ gift.cost }}</p>
-            <p>Link: <a href="{{ gift.link }}">{{ gift.link }}</a></p>
             <a href="{{ url_for('undo_bought', gift_id=gift._id) }}"
                 class="waves-effect waves-light btn undo-button">Undo</a>
         </div>
