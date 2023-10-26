@@ -50,12 +50,14 @@
           >Edit</a
         >
         <!-- Add a "Mark as Bought" button in the list of gifts -->
-        <a
-          href="{{ url_for('mark_as_bought', gift_id=gift._id) }}"
-          class="btn-small light-green lighten-1"
-        >
-          Mark as Bought
-        </a>
+        <p>
+          <a
+            href="{{ url_for('mark_as_bought', gift_id=gift._id) }}"
+            class="btn-small light-green lighten-1"
+          >
+            Mark as Bought
+          </a>
+        </p>
 
         <!-- inject the modals partials-template -->
         {% include "partials/modals.html" %} {% endif %}
