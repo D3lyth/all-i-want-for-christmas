@@ -77,7 +77,9 @@
     height: 100%;
     width: 50%;
 }
-.register-button, .login-button {
+
+.register-button,
+.login-button {
     text-align: center;
 }
 
@@ -111,6 +113,12 @@
 }
 
 /* Profile Page styling */
+
+.undo-button {
+    background-color: #ff5252;
+    color: #fff;
+    margin-top: 10px;
+}
 
 .card-panel {
     position: relative;
