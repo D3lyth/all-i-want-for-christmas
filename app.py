@@ -87,14 +87,27 @@ def get_gifts():
 
 # Search decorator for search bar
 
-
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     user = session["user"]
-    gifts = list(mongo.db.gifts.find(
-        {"gift_item": {"$regex": query, "$options": "i"}}))
+    
+    # Define a query that matches the search query in multiple fields
+    gifts = list(mongo.db.gifts.find({
+        "$and": [
+            {"$or": [
+                {"gift_item": {"$regex": query, "$options": "i"}},
+                {"list_name": {"$regex": query, "$options": "i"}},
+                {"cost": {"$regex": query, "$options": "i"}},
+                {"where_to_buy": {"$regex": query, "$options": "i"}},
+                {"link": {"$regex": query, "$options": "i"}}
+            ]},
+            {"created_by": user}
+        ]
+    }))
+    
     return render_template("allgifts.html", gifts=gifts)
+
 
 
 # Register new user decorator
@@ -185,8 +198,10 @@ def edit_gift(gift_id):
         if request.method == "POST":
             # Update the gift details based on the form input
             updated_gift = {
+                "gift_item": request.form.get("gift_item"),
                 "list_name": request.form.get("list_name"),
                 "cost": request.form.get("cost"),
+                "where_to_buy": request.form.get("where_to_buy"),
             }
             # Update the gift in the database
             mongo.db.gifts.update_one({"_id": ObjectId(gift_id)}, {
