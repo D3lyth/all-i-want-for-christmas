@@ -11,7 +11,7 @@
           type="text"
           name="query"
           id="query"
-          minlength="3"
+          minlength="2"
           class="validate"
           required
         />
@@ -49,20 +49,14 @@
           class="btn-small light-blue lighten-1"
           >Edit</a
         >
-        <!-- Add a "Mark as Bought" button in the list of gifts -->
-        <p>
-          <a
-            href="{{ url_for('mark_as_bought', gift_id=gift._id) }}"
-            class="btn-small light-green lighten-1"
-          >
-            Mark as Bought
-          </a>
-        </p>
-
-        <!-- inject the modals partials-template -->
-        {% include "partials/modals.html" %} {% endif %}
+        <a
+          href="{{ url_for('mark_as_bought', gift_id=gift._id) }}"
+          class="btn-small light-green lighten-1"
+          data-giftid="{{ gift._id }}"
+          >Got it!</a
+        >
+        {% endif %}
       </div>
-
       <div class="col s9">
         <strong>Item: {{ gift.gift_item }}</strong>
       </div>
@@ -78,4 +72,7 @@
 </ul>
 {% else %}
 <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
-{% endif %} {% endblock %}
+{% endif %}
+
+<!-- Include the modal partial -->
+{% include 'partials/modals.html' %} {% endblock %}
