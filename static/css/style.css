@@ -30,6 +30,7 @@
     width: 40px;
 }
 
+
 /* All pages styling */
 /* Xmas Lights */
 .xmaslights-image-container {
@@ -53,19 +54,32 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    max-width: 20%;
+    max-width: 18%;
     height: auto;
 }
 
-.welcome-title {
+.welcome-title,
+.welcome-description {
     text-align: center;
+    font-family: 'Amatic SC', sans-serif;
+    color: rgb(7, 128, 33);
+}
+
+.welcome-title {
+    font-size: 5rem;
+    font-weight: bolder;
+
+}
+
+.welcome-description {
+    font-size: 3rem;
 }
 
 .welcome-login-text,
 .welcome-register-here {
-    font-family: 'Mountains of Christmas', serif;
-    color: navy;
-    font-size: 30px;
+    font-family: 'Just Me Again Down Here', cursive;
+    color: rgb(7, 128, 33);
+    font-size: 35px;
     text-align: center;
 }
 
@@ -87,13 +101,9 @@
 @media screen and (max-width: 768px) {
     .santa-image {
         width: 100px;
-        /* Adjust the width as needed for mobile */
         position: fixed;
-        /* Keeps the image in place while scrolling on mobile */
         bottom: 10px;
-        /* Adjust the distance from the bottom as needed */
         right: 10px;
-        /* Adjust the distance from the right as needed */
     }
 }
 
@@ -101,16 +111,17 @@
 
 .allgifts-title,
 .addgift-title,
-.profile.title,
 .register-title,
 .login-title,
-.welcome-title,
-.welcome-description {
-    font-family: 'Just Me Again Down Here', cursive;
+.edit-gift-title {
+    font-family: 'League Script', cursive;
     color: navy;
-    font-weight: bolder;
+    font-weight: 800;
 
 }
+
+
+
 
 /* Profile Page styling */
 
@@ -130,68 +141,83 @@
     position: absolute;
     top: -20px;
     left: -15px;
-    /* Adjust left position as needed */
     width: 110%;
-    /* Adjust the size as needed */
     height: 50%;
 }
 
 .profile-title {
-    font-family: 'Just Me Again Down Here', cursive;
+    font-family: 'Julius Sans One', sans-serif;
     color: navy;
     text-align: center;
     margin: 10px;
+    font-size: 2rem;
 }
 
-/* Countdown timer styling */
-
-h4 {
-    margin: 50px;
+.bought-gifts-title {
+    font-family: 'Julius Sans One', sans-serif;
+    color: rgb(8, 82, 8);
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-size: 2rem;
 }
+
 
 /* Countdown Tiles Styles */
 .countdown-tile {
     text-align: center;
     display: inline-block;
     margin: 0 10px;
-    /* Adjust the margin as needed */
     padding: 10px;
-    /* Adjust the padding as needed */
     background-color: darkred;
-    /* Set the background color to dark red */
     border: 2px solid red;
-    /* Adjust the border color as needed */
     border-radius: 5px;
-    /* Adjust the border radius as needed */
     color: white;
-    /* Set the font color to white */
     font-size: 1.5rem;
-    /* Adjust the font size as needed */
 }
 
 .number {
     font-size: 2rem;
-    /* Adjust the font size as needed */
 }
 
 .text {
     font-size: 1rem;
-    /* Adjust the font size as needed */
 }
 
 /* Center-align the countdown tiles container */
 #countdown {
     text-align: center;
+    padding: 5%;
+    margin: 10px;
 }
 
 /* Define the style for the "Time Until Christmas" header */
 #countdown-header {
     font-size: 1.5rem;
-    /* Adjust the font size as needed */
 }
 
 .start-adding-gifts {
     display: flex;
     justify-content: center;
     /* Center horizontally */
+}
+
+
+/* Define the style for the "Time Until Christmas" header */
+.timer-title {
+    font-size: 5rem;
+    margin: 50px;
+    font-family: 'Amatic SC', sans-serif;
+}
+
+/* Style Gifts Already Bought */
+
+.collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-icon {
+    color: green;
 }
