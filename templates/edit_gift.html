@@ -1,56 +1,84 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <h3 class="text-darken-4 center-align">Edit Gift</h3>
 
 <div class="row">
-    <form class="col s12" method="POST" action="{{ url_for('edit_gift', gift_id=gift_item._id) }}">
-        <!-- List Name (editable input) -->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-pencil-alt prefix light-red-text text-darken-4"></i>
-                <input id="list_name" name="list_name" type="text" class="validate" required
-                    value="{{ gift_item.list_name }}">
-                <label for="list_name">For:</label>
-            </div>
-        </div>
+  <form
+    class="col s12"
+    method="POST"
+    action="{{ url_for('edit_gift', gift_id=gift_item._id) }}"
+  >
+    <!-- Gift Name (editable input) -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-pencil-alt prefix light-red-text text-darken-4"></i>
+        <input
+          id="list_name"
+          name="list_name"
+          type="text"
+          class="validate"
+          required
+          value="{{ gift_item.list_name }}"
+        />
+        <label for="list_name">For:</label>
+      </div>
+    </div>
 
-        <!-- Cost (editable input) -->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fa fa-credit-card prefix light-red-text text-darken-4"></i>
-                <input id="cost" name="cost" type="text" class="validate" required value="{{ gift_item.cost }}">
-                <label for "cost">Cost:</label>
-            </div>
-        </div>
+    <!-- Cost (editable input) -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fa fa-credit-card prefix light-red-text text-darken-4"></i>
+        <input
+          id="cost"
+          name="cost"
+          type="text"
+          class="validate"
+          required
+          value="{{ gift_item.cost }}"
+        />
+        <label for="cost">Cost:</label>
+      </div>
+    </div>
 
-        <!-- Where To Buy (editable input) -->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-shopping-bag prefix light-red-text text-darken-4"></i>
-                <input id="where_to_buy" name="where_to_buy" type="text" class="validate" required
-                    value="{{ gift_item.where_to_buy }}">
-                <label for "where_to_buy">Where To Buy:</label>
-            </div>
-        </div>
+    <!-- Where To Buy (editable input) -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-shopping-bag prefix light-red-text text-darken-4"></i>
+        <input
+          id="where_to_buy"
+          name="where_to_buy"
+          type="text"
+          class="validate"
+          required
+          value="{{ gift_item.where_to_buy }}"
+        />
+        <label for="where_to_buy">Where To Buy:</label>
+      </div>
+    </div>
 
-        <!-- Link (editable input) -->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-link prefix light-red-text text-darken-4"></i>
-                <input id="link" name="link" type="text" class="validate" required value="{{ gift_item.link }}">
-                <label for "link">Link:</label>
-            </div>
-        </div>
+    <!-- Link (editable input) -->
+    <div class="row">
+      <div class="input-field col s12">
+        <i class="fas fa-link prefix light-red-text text-darken-4"></i>
+        <input
+          id="link"
+          name="link"
+          type="text"
+          class="validate"
+          required
+          value="{{ gift_item.link }}"
+        />
+        <label for="link">Link:</label>
+      </div>
+    </div>
 
-        <!-- submit button -->
-        <div class="row">
-            <div class="col s12 center-align">
-                <button type="submit" class="btn-large light-blue darken-1 text-shadow">
-                    Edit Gift <i class="fas fa-edit right"></i>
-                </button>
-            </div>
-        </div>
-    </form>
+    <!-- submit button -->
+    <div class="row">
+      <div class="col s12 center-align">
+        <button type="submit" class="btn-large light-blue darken-1 text-shadow">
+          Edit Gift <i class="fas fa-edit right"></i>
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
 {% endblock %}
