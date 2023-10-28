@@ -6,7 +6,7 @@
   <form action="{{ url_for('search') }}" method="post" class="col s12">
     <div class="row valign-wrapper center-align">
       <div class="input-field col s12 m8">
-        <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+        <i class="fas fa-search prefix light-green-text text-darken-4"></i>
         <input
           type="text"
           name="query"
@@ -18,7 +18,7 @@
         <label for="query">Search Gifts</label>
       </div>
       <div class="col s12 m4">
-        <a href="{{ url_for('get_gifts') }}" class="red btn text-shadow"
+        <a href="{{ url_for('get_gifts') }}" class="orange btn text-shadow"
           >Reset</a
         >
         <button type="submit" class="light-green darken-1 btn text-shadow">
@@ -33,25 +33,25 @@
 <ul class="collapsible">
   {% for gift in gifts %}
   <li>
-    <div
-      class="collapsible-header darkgreen-text light-red darken-4 text-shadow"
-    >
+    <div class="collapsible-header darkgreen-text light-red darken-4">
       <div class="col s3">
         <i class="fas fa-caret-down"></i>
         {% if session.user|lower == gift.created_by|lower %}
         <a
           href="{{ url_for('delete_gift', gift_id=gift._id) }}"
-          class="btn-small light-pink lighten-1"
+          class="btn-small red lighten-1 text-shadow modal-trigger"
+          data-target="modal-{{ gift._id }}"
           >Delete</a
         >
+
         <a
           href="{{ url_for('edit_gift', gift_id=gift._id) }}"
-          class="btn-small light-blue lighten-1"
+          class="btn-small light-blue text-shadow lighten-1"
           >Edit</a
         >
         <a
           href="{{ url_for('mark_as_bought', gift_id=gift._id) }}"
-          class="btn-small light-green lighten-1"
+          class="btn-small light-green text-shadow lighten-1"
           data-giftid="{{ gift._id }}"
           >Got it!</a
         >
@@ -65,7 +65,6 @@
       <strong>For: {{ gift.list_name }}</strong>
       <p>Where to Buy: {{ gift.where_to_buy }}</p>
       <p>Cost: {{ gift.cost }}</p>
-      <p>Link: <a href="{{ gift.link }}">{{ gift.link }}</a></p>
     </div>
   </li>
   {% endfor %}
@@ -73,6 +72,3 @@
 {% else %}
 <h3 class="red-text text-darken-4 center-align">No Results Found</h3>
 {% endif %}
-
-<!-- Include the modal partial -->
-{% include 'partials/modals.html' %} {% endblock %}
