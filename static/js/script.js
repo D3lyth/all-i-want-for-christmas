@@ -55,3 +55,51 @@ document.addEventListener('DOMContentLoaded', function () {
     let selects = document.querySelectorAll("select");
     let selectsInstance = M.FormSelect.init(selects);
 });
+
+// JavaScript function to hide the clicked gift item
+function markAsBought(button) {
+    const giftId = button.getAttribute('data-giftid'); // Get the gift ID from the button
+    const giftItem = document.querySelector(`li[data-giftid="${giftId}"]`); // Find the corresponding gift item
+
+    if (giftItem) {
+        giftItem.style.display = 'none'; // Hide the gift item
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Add event listeners for "GOT IT!" buttons
+    const markAsBoughtButtons = document.querySelectorAll(".btn-small.light-green");
+    markAsBoughtButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            markAsBought(this); // Call the markAsBought function when clicked
+        });
+    });
+});
+
+// JavaScript code to hide the message when a gift is added
+$(document).ready(function () {
+    // Event listener to the "Add Gift" button in the modal
+    $("#add-gift-button").on("click", function () {
+        // Hide the message when a gift is added
+        $("#no-gifts-message").hide();
+    });
+});
+
+
+
+// Flash messages trigger
+
+$(document).ready(function () {
+    // Check for flash messages
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    var flashMessage = "{{ messages[0] }}"; // Get the first flash message
+    if (flashMessage) {
+        // Display the modal and set the message content
+        var modal = M.Modal.init(document.getElementById('flash-message-modal'));
+        document.getElementById('flash-message-content').textContent = flashMessage;
+        modal.open();
+    }
+    {% endif %}
+    {% endwith %}
+});
