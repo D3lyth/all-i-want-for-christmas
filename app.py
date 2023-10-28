@@ -92,18 +92,8 @@ def get_gifts():
 def search():
     query = request.form.get("query")
     user = session["user"]
-    gifts = list(mongo.db.gifts.find({
-        "$and": [
-            {"$or": [
-                {"gift_item": {"$regex": query, "$options": "i"}},
-                {"list_name": {"$regex": query, "$options": "i"}},
-                {"cost": {"$regex": query, "$options": "i"}},
-                {"where_to_buy": {"$regex": query, "$options": "i"}},
-                {"link": {"$regex": query, "$options": "i"}}
-            ]},
-            {"created_by": user}
-        ]
-    }))
+    gifts = list(mongo.db.gifts.find(
+        {"gift_item": {"$regex": query, "$options": "i"}}))
     return render_template("allgifts.html", gifts=gifts)
 
 

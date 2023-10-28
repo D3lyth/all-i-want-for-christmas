@@ -38,85 +38,41 @@ In this section, you will briefly explain your design processes.
 
 ### Colour Scheme
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+Traditional colours of green and red were chosed for the main theme of the app.
 
-Explain your colours and the colour scheme.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
+- `#7cb342` used for the nav bar on all pages
+- `#078021` used for primary title page text
+- `#000080` used for title pages 
+- `#000000` used for list text
 
 ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Consider adding a link and screenshot for your colour scheme using "coolors".
-<https://coolors.co/generate>
-
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
-
-![screenshot](documentation/coolors.png)
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
-
-```css
-:root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
-}
-```
 
 ### Typography
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+Font Awesome was used extensively for the icons on the forms, on buttons and for the holly on the main welcome page.
 
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
+Google fonts was used for various fonts throughout the app.
 
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
+- [Delicious Handrawn](https://fonts.google.com/specimen/Delicious+Handrawn) was used for the brand logo - white font was chosen to make it look like snow.
 
-Example:
+- [Amatic SC](https://fonts.google.com/specimen/Amatic+SC) was used for the main welcome page text as it is a nice clean font.
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- [League Script](https://fonts.google.com/specimen/League+Script) was used for the titles of most pages. This was chosen to make it look like it was hand-written in pen, just as someone would do when writing lists.
 
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
-
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as form field icons.
 
 ## User Stories
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, list all of your user stories for the project.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a new site user, I would like to register as a new user, so that I can begin using the christmas gift app.
+- As a new site user, I would like to start adding gifts to my list by gift name, recipient, cost and where to buy, so that I can keep a record of what I need to buy.
+- As a new site user, I would like to see all the gifts I haave added to my list, so that I can see what gift ideas I alreaady have.
+- As a new site user, I would like to edit my gift, so that I can correct any mistakes I may have made when inputting the information.
+- As a new site user, I would like to delete my gift, so that I can remove from my list so that I know that I don't need to buy it anymore.
+- As a new site user, I would like to add new gifts to my list, so that I can keep track of ideas that I might have for gifts for various people.
+- As a new site user, I would like to be able to select a gift once I have bought it, so that I can see how many gift I have bought, how much I have spent, for whom I have bought gifts for, so that I can keep track of what I have already bought.
+- As a new site user, I would like to undo the option of having bought a gift, so that I can remove something off my  bought list incase I pressed a button by mistake, or decided to rerurn an item.
 
 ### Returning Site Users
 
