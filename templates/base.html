@@ -113,15 +113,17 @@
       />
     </div>
 
-    <section>
-      <!-- flash messages -->
-      {% with messages = get_flashed_messages() %} {% if messages %} {% for
-      message in messages %}
-      <div class="row flashes">
-        <h4 class="light-greenlighten-4 center-align">{{ message }}</h4>
+    <!-- flash modal -->
+
+    <div id="flash-message-modal" class="modal">
+      <div class="modal-content">
+        <h4>Flash Message</h4>
+        <p id="flash-message-content"></p>
       </div>
-      {% endfor %} {% endif %} {% endwith %}
-    </section>
+      <div class="modal-footer">
+        <a class="modal-close waves-effect waves-light btn">OK</a>
+      </div>
+    </div>
 
     <main class="container">{% block content %} {% endblock %}</main>
 
