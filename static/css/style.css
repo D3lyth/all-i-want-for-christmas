@@ -105,6 +105,68 @@
         bottom: 10px;
         right: 10px;
     }
+
+    .brand-logo {
+        font-family: 'Delicious Handrawn', cursive;
+        margin-left: 10px;
+        top: 5px;
+    }
+
+    .santa-hat {
+        position: fixed;
+        top: 0px;
+        right: 223px;
+        width: 35px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Adjust font sizes */
+    .welcome-title {
+        font-size: 3rem;
+    }
+
+    .welcome-description {
+        font-size: 2rem;
+    }
+
+    /* Adjust padding and margins */
+    .center-buttons {
+        width: 80%;
+    }
+
+    .register-button,
+    .login-button {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    /* Switch to single-column layout */
+    .countdown-tile {
+        display: block;
+        margin: 10px auto;
+    }
+
+    /* Responsive navigation menu */
+    .sidenav-trigger {
+        display: block;
+    }
+
+    /* Adjust image responsiveness */
+    .santa-image {
+        width: 80px;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .santa-hat {
+        position: fixed;
+        top: 0px;
+        right: 223px;
+        width: 35px;
+    }
 }
 
 /* General page styling */
