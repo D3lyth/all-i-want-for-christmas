@@ -74,11 +74,17 @@
     <!-- submit button -->
     <div class="row">
       <div class="col s12 center-align">
-        <button type="submit" class="btn-large red darken-1 text-shadow">
+        <button
+          type="submit"
+          class="btn-large red darken-1 text-shadow modal-trigger"
+          data-target="modal-{{ gift._id }}"
+        >
           Edit Gift
         </button>
       </div>
     </div>
   </form>
 </div>
-{% endblock %}
+
+<!-- Include the modals partial template -->
+{% include "partials/modals.html" %} {% endblock %}
