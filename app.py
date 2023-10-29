@@ -175,8 +175,8 @@ def add_gift():
             "gift_item": request.form.get("gift_item"),
             "cost": request.form.get("cost"),
             "where_to_buy": request.form.get("where_to_buy"),
-            "link": request.form.get("link"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "bought": False
         }
         mongo.db.gifts.insert_one(gift_to_add)
         flash("Gift Successfully Added")
