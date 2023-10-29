@@ -28,24 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Modal event Listeners
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Initialize the modal
-    let modal = document.getElementById('confirmUndo');
-
-    // Open the modal when the "Undo" button is clicked
-    let undoButtons = document.getElementsByClassName('undo-gift-button');
-    Array.from(undoButtons).forEach(function (button) {
-        button.addEventListener('click', function (event) {
-            event.preventDefault();
-            let giftId = button.getAttribute('data-gift-id');
-            let modalConfirm = document.querySelector('#confirmUndo .modal-confirm');
-            modalConfirm.setAttribute('form', 'form-' + giftId);
-            M.Modal.getInstance(modal).open();
-        });
-    });
-
-    // Close the modal when the "Cancel" button is clicked
-    let modalCancel = document.querySelector('#confirmUndo .modal-close');
-    modalCancel.addEventListener('click', function () {
-        M.Modal.getInstance(modal).close();
-    });
+    let modals = document.querySelectorAll('.modal');
+    M.Modal.init(modals);
 });
+
