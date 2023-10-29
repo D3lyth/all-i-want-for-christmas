@@ -235,22 +235,29 @@
     border: 2px solid red;
     border-radius: 5px;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    height: 3rem;
+    width: 3rem;
 }
 
 .number {
     font-size: 2rem;
+    color: white;
 }
 
 .text {
     font-size: 1rem;
+    font-family: 'Amatic' cursive;
 }
 
 /* Center-align the countdown tiles container */
 #countdown {
     text-align: center;
-    padding: 5%;
-    margin: 10px;
+    padding: 2%;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 /* Define the style for the "Time Until Christmas" header */
