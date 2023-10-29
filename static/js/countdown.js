@@ -10,6 +10,8 @@ function updateCountdown() {
         christmas.setFullYear(now.getFullYear() + 1);
     }
 
+
+
     let timeUntilChristmas = christmas - now;
 
     // Convert the time remaining to days, hours, minutes, and seconds
@@ -19,8 +21,12 @@ function updateCountdown() {
     let seconds = Math.floor((timeUntilChristmas % (1000 * 60)) / 1000);
 
     // Update the countdown element with the calculated time
-    document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 }
+
 
 // Update the countdown every second
 setInterval(updateCountdown, 1000);
