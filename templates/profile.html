@@ -66,12 +66,14 @@
         <p>Cost: {{ gift.cost }}</p>
         <a
           href="{{ url_for('undo_bought', gift_id=gift._id) }}"
-          class="waves-effect waves-light btn undo-button undo-gift-button"
+          class="waves-effect waves-light btn undo-button undo-gift-button modal-trigger"
           data-gift-id="{{ gift._id }}"
-          >Undo</a
+          data-target="modal-undo-{{ gift._id }}">Undo</a
         >
       </div>
     </li>
+    <!-- inject the modals partials-template -->
+  {% include "partials/modals.html" %}
     {% endif %} {% endfor %}
   </ul>
 </div>
