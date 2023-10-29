@@ -91,7 +91,7 @@ def get_gifts():
 def search():
     query = request.form.get("query")
     user = session["user"]
-    
+
     # Define a query that matches the search query in multiple fields
     gifts = list(mongo.db.gifts.find({
         "$and": [
@@ -105,9 +105,8 @@ def search():
             {"created_by": user}
         ]
     }))
-    
-    return render_template("allgifts.html", gifts=gifts)
 
+    return render_template("allgifts.html", gifts=gifts)
 
 
 # Register new user decorator
@@ -254,6 +253,7 @@ def mark_as_bought(gift_id):
 @app.route("/undo_bought/<gift_id>")
 @login_required
 def undo_bought(gift_id):
+    print('invoking undo_bought route')
     # Find the gift, ensuring it was created by the current user
     gift = mongo.db.gifts.find_one(
         {"_id": ObjectId(gift_id), "created_by": session["user"]})
