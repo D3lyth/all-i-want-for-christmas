@@ -22,7 +22,7 @@
           >Reset</a
         >
         <button type="submit" class="light-green darken-1 btn text-shadow">
-          <i class="fas fa-search left"></i> Search
+          Search
         </button>
       </div>
     </div>
@@ -35,7 +35,7 @@
   marked as bought #}
   <li>
     <div class="collapsible-header darkgreen-text light-red darken-4">
-      <div class="col s3">
+      <div class="col s3 gift-buttons">
         <i class="fas fa-caret-down"></i>
         {% if session.user|lower == gift.created_by|lower %}
         <a
