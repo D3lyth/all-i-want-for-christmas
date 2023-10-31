@@ -41,16 +41,19 @@ The URL will look something like this:
 
 Sample HTML code validation documentation (tables are extremely helpful!):
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+🛑🛑🛑🛑🛑 NEED TO CHANGE LINKS AND TEST 🛑🛑🛑🛑🛑
 
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FD3lyth.github.io%2Fall-i-want-for-christmas%2Findex.html) | ![screenshot](documentation/html-validation-home.png) | Section lacks header h2-h6 warning |
-| Contact | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FD3lyth.github.io%2Fall-i-want-for-christmas%2Fcontact.html) | ![screenshot](documentation/html-validation-contact.png) | obsolete iframe warnings |
-| Quiz | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FD3lyth.github.io%2Fall-i-want-for-christmas%2Fquiz.html) | ![screenshot](documentation/html-validation-quiz.png) | Pass: No Errors |
-| Add Blog | n/a | ![screenshot](documentation/html-validation-add-blog.png) | Duplicate IDs found, and fixed |
-| Checkout | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining HTML files |
+| Base Page | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FD3lyth.github.io%2Fall-i-want-for-christmas%2Findex.html) | ![screenshot](documentation/html-validation-home.png) | Section lacks header h2-h6 warning |
+| Welcome | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FD3lyth.github.io%2Fall-i-want-for-christmas%2Fcontact.html) | ![screenshot](documentation/html-validation-contact.png) | obsolete iframe warnings |
+| Register Page | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FD3lyth.github.io%2Fall-i-want-for-christmas%2Fquiz.html) | ![screenshot](documentation/html-validation-quiz.png) | Pass: No Errors |
+| Profile Login Page | n/a | ![screenshot](documentation/html-validation-add-blog.png) | Duplicate IDs found, and fixed |
+| Profile Page | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
+| All Gift - List Page | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
+| Add Gift Page | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
+| Edit Gift Page | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
+
 
 ⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
@@ -100,15 +103,9 @@ If you're using extras like Bootstrap, Materialize, Font Awesome, then sometimes
 will attempt to also validate this code, even if it's not part of your own actual code.
 You are not required to validate the external libraries or frameworks!
 
-Sample CSS code validation documentation (tables are extremely helpful!):
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 | File | Jigsaw URL | Screenshot | Notes |
 | --- | --- | --- | --- |
 | style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2FD3lyth.github.io%2Fall-i-want-for-christmas) | ![screenshot](documentation/css-validation-style.png) | Pass: No Errors |
-| checkout.css | n/a | ![screenshot](documentation/css-validation-checkout.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining CSS files |
 
 ### JavaScript
 
@@ -148,10 +145,7 @@ Sample JS code validation documentation (tables are extremely helpful!):
 | File | Screenshot | Notes |
 | --- | --- | --- |
 | script.js | ![screenshot](documentation/js-validation-script.png) | Unused variables from external files |
-| questions.js | ![screenshot](documentation/js-validation-questions.png) | Pass: No Errors |
-| quiz.js | ![screenshot](documentation/js-validation-quiz.png) | Unused variables from external files |
-| stripe_elements.js | ![screenshot](documentation/js-validation-stripe.png) | Undefined Stripe variable |
-| x | x | x | repeat for all remaining JavaScript files |
+| countdown.js | ![screenshot](documentation/js-validation-countdown.png) | Pass: No Errors |
 
 ### Python
 
@@ -205,12 +199,9 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| run.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/D3lyth/all-i-want-for-christmas/main/run.py) | ![screenshot](documentation/py-validation-run.png) | W291 trailing whitespace |
-| settings.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/D3lyth/all-i-want-for-christmas/main/boutique-ado/settings.py) | ![screenshot](documentation/py-validation-settings.png) | E501 line too long |
+| app.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/D3lyth/all-i-want-for-christmas/main/app.py) | ![screenshot](documentation/py-validation-app.png) | W291 trailing whitespace |
+| countdown.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/D3lyth/all-i-want-for-christmas/main/countdown.py) | ![screenshot](documentation/py-validation-countdown.png) | E501 line too long |
 | Blog views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/D3lyth/all-i-want-for-christmas/main/blog/views.py) | ![screenshot](documentation/py-validation-blog-views.png) | Pass: No Errors |
-| Checkout urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/D3lyth/all-i-want-for-christmas/main/checkout/urls.py) | ![screenshot](documentation/py-validation-checkout-urls.png) | W292 no newline at end of file |
-| Profiles models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/D3lyth/all-i-want-for-christmas/main/profiles/models.py) | ![screenshot](documentation/py-validation-profiles-models.png) | Pass: No Errors |
-| x | x | x | repeat for all remaining Python files |
 
 ## Browser Compatibility
 
@@ -224,7 +215,6 @@ Recommended browsers to consider:
 
 - [Chrome](https://www.google.com/chrome)
 - [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
-- [Edge](https://www.microsoft.com/edge)
 - [Safari](https://support.apple.com/downloads/safari)
 - [Brave](https://brave.com/download)
 - [Opera](https://www.opera.com/download)
@@ -245,12 +235,9 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 | --- | --- | --- |
 | Chrome | ![screenshot](documentation/browser-chrome.png) | Works as expected |
 | Firefox | ![screenshot](documentation/browser-firefox.png) | Works as expected |
-| Edge | ![screenshot](documentation/browser-edge.png) | Works as expected |
 | Safari | ![screenshot](documentation/browser-safari.png) | Minor CSS differences |
 | Brave | ![screenshot](documentation/browser-brave.png) | Works as expected |
 | Opera | ![screenshot](documentation/browser-opera.png) | Minor differences |
-| Internet Explorer | ![screenshot](documentation/browser-iex.png) | Does not work as expected |
-| x | x | repeat for any other tested browsers |
 
 ## Responsiveness
 
@@ -266,8 +253,6 @@ The minimum requirement is for the following 3 tests:
 
 **IMPORTANT**: You must provide screenshots of the tested responsiveness, to "prove" that you've actually tested them.
 
-Using the "amiresponsive" mockup image (or similar) does not suffice the requirements.
-Consider using some of the built-in device sizes in the Developer Tools.
 
 If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well.
 It showcases a higher level of manual tests, and can be seen as a positive inclusion!
@@ -287,38 +272,27 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | 4K Monitor | ![screenshot](documentation/responsive-4k.png) | Noticeable scaling issues |
 | Google Pixel 7 Pro | ![screenshot](documentation/responsive-pixel.png) | Works as expected |
 | iPhone 14 | ![screenshot](documentation/responsive-iphone.png) | Works as expected |
-| x | x | repeat for any other tested sizes |
 
 ## Lighthouse Audit
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
-Avoid testing the local version (especially if developing in Gitpod), as this can have knock-on effects of performance.
-
-If you don't have Lighthouse in your Developer Tools,
-it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Don't just test the home page (unless it's a single-page application).
-Make sure to test the Lighthouse Audit results for all of your pages.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-Sample Lighthouse testing documentation:
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
 | Page | Size | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Home | Mobile | ![screenshot](documentation/lighthouse-home-mobile.png) | Some minor warnings |
-| Home | Desktop | ![screenshot](documentation/lighthouse-home-desktop.png) | Few warnings |
-| About | Mobile | ![screenshot](documentation/lighthouse-about-mobile.png) | Some minor warnings |
-| About | Desktop | ![screenshot](documentation/lighthouse-about-desktop.png) | Few warnings |
-| Gallery | Mobile | ![screenshot](documentation/lighthouse-gallery-mobile.png) | Slow response time due to large images |
-| Gallery | Desktop | ![screenshot](documentation/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
+| Welcome | Mobile | ![screenshot](documentation/lighthouse-welcome-mobile.png) | Some minor warnings |
+| Welcome | Desktop | ![screenshot](documentation/lighthouse-welcome-desktop.png) | Few warnings |
+| Register | Mobile | ![screenshot](documentation/lighthouse-register-mobile.png) | Some minor warnings |
+| Register | Desktop | ![screenshot](documentation/lighthouse-register-desktop.png) | Few warnings |
+| Profile Login | Mobile | ![screenshot](documentation/lighthouse-profile-login-mobile.png) | Slow response time due to large images |
+| Profile Login | Desktop | ![screenshot](documentation/lighthouse-profile-login-desktop.png) | Slow response time due to large images |
+| Profile | Mobile | ![screenshot](documentation/lighthouse-profile-mobile.png) | Slow response time due to large images |
+| Profile | Desktop | ![screenshot](documentation/lighthouse-profile-desktop.png) | Slow response time due to large images |
+| Gift List Page | Mobile | ![screenshot](documentation/lighthouse-gift-list-mobile.png) | Slow response time due to large images |
+| Gift List Page| Desktop | ![screenshot](documentation/lighthouse-gift-list-desktop.png) | Slow response time due to large images |
+| Edit Gift | Mobile | ![screenshot](documentation/lighthouse-edit-list-mobile.png) | Slow response time due to large images |
+| Edit Gift | Desktop | ![screenshot](documentation/lighthouse-edit-list-desktop.png) | Slow response time due to large images |
+| Add Gift | Mobile | ![screenshot](documentation/lighthouse-add-gift-mobile.png) | Slow response time due to large images |
+| Add Gift | Desktop | ![screenshot](documentation/lighthouse-add-gift-desktop.png) | Slow response time due to large images |
 
 ## Defensive Programming
 
