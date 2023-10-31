@@ -1,40 +1,23 @@
 # ALL I WANT FOR CHRISTMAS
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+Welcome to All I Want For Christmas - the app that allows you to keep a record of all the gifts that you need to get during the busy holiday season and 'tick them off' once they have been bought.
 
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
+Quite often whilst shopping or searching the internet, people see some items and think 'Ooh, that would be a great gift for Grandma, or if at the shops and you can't pick up a gift due to the gift recipients being present, then keeping an up-to-date list is one way of ensuring nothing is left in the shops - no mad dash on Christmas Eve to make sure that everyone's wish list has been met!
 
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
+This app would be useful for anyone buying gifts during Christmas time - most people will be trying to keep a record of gifts ideas, and gits bought in the run up to Christmas Day. Searches can be made to see who the gifts are for, how much they cost, what items are being bought and where to buy them. It means that the gift list can be filtered to show all items needed at a particular shop without having to scroll through all the items.
 
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
+Users will also be able to delete gifts if they no longer need to buy them, gifts can be edited if thiings such as prices or where to buy changes.
 
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
-<https://ui.dev/amiresponsive?url=https://all-i-want-for-christmas-11c6c44413ce.herokuapp.com>
-
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
+Here's the link to thedeployed site:
+<https://all-i-want-for-christmas-11c6c44413ce.herokuapp.com/>
 
 ![screenshot](documentation/mockup.png)
 
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-<https://pandao.github.io/editor.md/en.html>
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ## UX
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+The ideas for designing the app was that it was a simple, and quick way to be able to record the gift ideas without over complicating the process. Often when seeing a good idea of a gift, people will think - I must remember thiis, but then when it comes to birthdays and christmas, they've forgotten what to get. Also, mst people when shopping can be in a rush or busy, therefore finding a way of noting these gifts in a simple, and quick manner was paramount.
 
-In this section, you will briefly explain your design processes.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+Another 
 
 ### Colour Scheme
 
@@ -67,20 +50,24 @@ Google fonts was used for various fonts throughout the app.
 
 - As a new site user, I would like to register as a new user, so that I can begin using the christmas gift app.
 - As a new site user, I would like to start adding gifts to my list by gift name, recipient, cost and where to buy, so that I can keep a record of what I need to buy.
-- As a new site user, I would like to see all the gifts I haave added to my list, so that I can see what gift ideas I alreaady have.
+- As a new site user, I would like to see all the gifts I have added to my list, so that I can see what gift ideas I alreaady have.
 - As a new site user, I would like to edit my gift, so that I can correct any mistakes I may have made when inputting the information.
 - As a new site user, I would like to delete my gift, so that I can remove from my list so that I know that I don't need to buy it anymore.
 - As a new site user, I would like to add new gifts to my list, so that I can keep track of ideas that I might have for gifts for various people.
 - As a new site user, I would like to be able to select a gift once I have bought it, so that I can see how many gift I have bought, how much I have spent, for whom I have bought gifts for, so that I can keep track of what I have already bought.
-- As a new site user, I would like to undo the option of having bought a gift, so that I can remove something off my  bought list incase I pressed a button by mistake, or decided to rerurn an item.
+- As a new site user, I would like to undo the option of having bought a gift, so that I can remove something off my  bought list incase I pressed a button by mistake, or decided to return an item.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a returning site user, I would like to be able to log on to my account to be able to access my gift list and profile thatI hve already started.
+- As a returning site user, I would like to continue to add gifts to my list by gift name, recipient, cost and where to buy, so that I can continue keep a record of what I need to buy.
+- As a returning site user, I would like to continue and goo back to see all the gifts I have added to my list, so that I can see what gift ideas I alreaady have.
+- As a returning site user, I would like to edit my gift, so that I can correct any mistakes I may have made when inputting the information.
+- As a returning site user, I would like to delete my gift, so that I can remove from my list so that I know that I don't need to buy it anymore.
+- As a returning site user, I would like to be able to select a gift once I have bought it, so that I can see how many gift I have bought, how much I have spent, for whom I have bought gifts for, so that I can keep track of what I have already bought.
+- As a returning site user, I would like to undo the option of having bought a gift, so that I can remove something off my  bought list incase I pressed a button by mistake, or decided to return an item.
+- As a returning site user, I would liek to be able to search my gift list to be able to filter for recipient, where to buy, type of gift and cost to be able to make the shopping experience for getting the gifts more efficient.
+- As a returning site user, I would like too be able to log out of my account to keep my data safe.
 
 ### Site Admin
 
@@ -180,82 +167,56 @@ Hint: the more, the merrier!
 
 ### Future Features
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+There is a lot of potential for this app. Some of the future features that can be made to expand on the app could be as follows:
 
-Do you have additional ideas that you'd like to include on your project in the future?
-Fantastic! List them here!
-It's always great to have plans for future improvements!
-Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- Title for future feature #1
-  - Any additional notes about this feature.
-- Title for future feature #2
-  - Any additional notes about this feature.
-- Title for future feature #3
-  - Any additional notes about this feature.
+- Shared Lists
+  - Family or friends can share lists so that the responsibility of buying gifts for family can be shared amongst more than the original gift list creator. For emample - both parents could have access to certain lists so that both can buy gifts for the children.
+- Reminders
+  - Reminders could be set up - last international posting dates, last date for online orders to be made.
+- Christmas Traditions Lists / Reminders
+  - If your family/household has Christmas/ Christmas Eve traditions - these can be placed in the list as a reminder. Things such as; decorate the tree, milk and snacks for Santa, get Christmas PJs ready etc.
+- Christmas Lunch lists / reminders
+  - Christmas lunch is one of the most important parts of the day. List and reminders can be set up for things like - christmas food shop, turkey pick up day, what needs preparing in advance etc.
+- Christmas Cards List
+  - Christmas cards lists can be set up to keep track of cards to be sent. This can include links to addresses / e-mail addresses for e-cards and gift vouchers.
 
 ## Tools & Technologies Used
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, you should explain the various tools and technologies used to develop the project.
-Make sure to put a link (where applicable) to the source, and explain what each was used for.
-Some examples have been provided, but this is just a sample only, your project might've used others.
-Feel free to delete any unused items below as necessary.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+Here are the tools and technologies that was used to produce the All I want For Christmas app.
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [CSS](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.
-- [CSS :root variables](https://www.w3schools.com/css/css3_variables.asp) used for reusable styles throughout the site.
 - [CSS Flexbox](https://www.w3schools.com/css/css3_flexbox.asp) used for an enhanced responsive layout.
-- [CSS Grid](https://www.w3schools.com/css/css_grid.asp) used for an enhanced responsive layout.
 - [JavaScript](https://www.javascript.com) used for user interaction on the site.
 - [Python](https://www.python.org) used as the back-end programming language.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
 - [GitHub Pages](https://pages.github.com) used for hosting the deployed front-end site.
-- [Gitpod](https://gitpod.io) used as a cloud-based IDE for development.
-- [Bootstrap](https://getbootstrap.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
+- [CodeAnywhere](https://codeanywhere.coom) used as a cloud-based IDE for development.
 - [Materialize](https://materializecss.com) used as the front-end CSS framework for modern responsiveness and pre-built components.
 - [Flask](https://flask.palletsprojects.com) used as the Python framework for the site.
-- [Django](https://www.djangoproject.com) used as the Python framework for the site.
 - [MongoDB](https://www.mongodb.com) used as the non-relational database management with Flask.
-- [SQLAlchemy](https://www.sqlalchemy.org) used as the relational database management with Flask.
-- [PostgreSQL](https://www.postgresql.org) used as the relational database management.
-- [ElephantSQL](https://www.elephantsql.com) used as the Postgres database.
 - [Heroku](https://www.heroku.com) used for hosting the deployed back-end site.
-- [Cloudinary](https://cloudinary.com) used for online static file storage.
-- [Stripe](https://stripe.com) used for online secure payments of ecommerce products/services.
-- [AWS S3](https://aws.amazon.com/s3) used for online static file storage.
 
 ## Database Design
 
 My project uses a non-relational database with MongoDB, and therefore the database architecture
 doesn't have actual relationships like a relational database would.
 
-My database is called **task_manager**.
+My database is called **all_i_want_for_christmas**.
 
-It contains 3 collections:
+It contains 2 collections:
 
-- **categories**
+- **gifts**
     | Key | Type | Notes |
     | --- | --- | --- |
     | _id | ObjectId() | |
-    | category_name | String | |
-
-- **tasks**
-    | Key | Type | Notes |
-    | --- | --- | --- |
-    | _id | ObjectId() | |
-    | category_name | String | selected from *categories* collection |
-    | task_name | String | |
-    | task_description | String | |
-    | is_urgent | String | |
-    | due_date | String | |
+    | list_name | String | |
+    | gift_item | String | |
+    | cost | String | |
+    | where_to_buy | String |
     | created_by | String | selected from the *users* collection |
+    | bought | Boolean | |
 
 - **users**
     | Key | Type | Notes |
@@ -270,32 +231,7 @@ For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-**IMPORTANT:**
-
-- Be sure to remove all instances of ElephantSQL/PostgreSQL/Flask-Migrate if you've only used a non-relational database with MongoDB
-- Be sure to remove all instances of MongoDB if you've only used a relational database with ElephantSQL/PostgreSQL
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-- ⚠️ DO NOT update the environment variables to your own! These should NOT be included in this file; just demo values! ⚠️
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 The live deployed application can be found deployed on [Heroku](https://all-i-want-for-christmas-11c6c44413ce.herokuapp.com).
-
-### ElephantSQL Relational Database
-
-This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
-
-To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
-
-- Click **Create New Instance** to start a new database.
-- Provide a name (this is commonly the name of the project: PLACEHOLDER-NAME).
-- Select the **Tiny Turtle (Free)** plan.
-- You can leave the **Tags** blank.
-- Select the **Region** and **Data Center** closest to you.
-- Once created, click on the new database name, where you can view the database URL and Password.
 
 ### MongoDB Non-Relational Database
 
@@ -370,58 +306,10 @@ For either method, you will need to install any applicable packages found within
 
 - `pip3 install -r requirements.txt`.
 
-If you are using SQLAlchemy for your project, you need to create a local PostgreSQL database.
-In this example, the example database name is **db-name**.
-
-```shell
-workspace (branch) $ set_pg
-workspace (branch) $ psql
-
-... connection to postgres ...
-
-postgres=# CREATE DATABASE db-name;
-CREATE DATABASE
-postgres=# \c db-name;
-You are now connected to database "db-name" as user "foobar".
-db-name=# \q
-```
-
-Once that database is created, you must migrate the database changes from your models.py file.
-This example uses **app-name** for the name of the primary Flask application.
-
-```shell
-workspace (branch) $ python3
-
-... connection to Python CLI ...
-
->>> from app-name import db
->>> db.create_all()
->>> exit()
-```
-
-To confirm that the database table(s) have been created, you can use the following:
-
-```shell
-workspace (branch) $ psql -d db-name
-
-... connection to postgres ...
-
-postgres=# \dt
-
-	List of relations
-Schema | Name | Type | Owner
--------+------+------+--------
-public | blah1 | table | foobar
-public | blah2 | table | foobar
-public | blah3 | table | foobar
-
-db-name=# \q
-```
-
 You will need to create a new file called `env.py` at the root-level,
 and include the same environment variables listed above from the Heroku deployment steps, plus a few extras.
 
-Sample `env.py` file:
+The sample `env.py` file should look like the following:
 
 ```python
 import os
@@ -437,34 +325,6 @@ os.environ.setdefault("DB_URL", "user's own value")
 os.environ.setdefault("DEBUG", "True")
 os.environ.setdefault("DEVELOPMENT", "True")
 ```
-
-If using Flask-Migrate, make sure to include the following steps as well.
-
-During the course of development, it became necessary to update the PostgreSQL data models.
-In order to do this, [Flask-Migrate](https://flask-migrate.readthedocs.io) was used.
-
-- `pip3 install Flask-Migrate`
-- Import the newly installed package on your main `__init__.py` file:
-  - `from flask_migrate import Migrate`
-- Define **Migrate** in the same file after **app** and **db** are defined:
-  - `migrate = Migrate(app, db)`
-- Initiate the migration changes in the terminal:
-
-```shell
-workspace (branch) $ flask db init
-
-	... generating migrations ...
-
-workspace (branch) $ set_pg
-workspace (branch) $ flask db migrate -m "Add a commit message for this migration"
-
-	... migrating changes ...
-
-workspace (branch) $ flask db upgrade
-
-	... updating database ...
-```
-
 #### Cloning
 
 You can clone the repository by following these steps:
@@ -478,12 +338,9 @@ You can clone the repository by following these steps:
 	- `git clone https://github.com/D3lyth/all-i-want-for-christmas.git`
 7. Press Enter to create your local clone.
 
-Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+Alternatively, if using CodeAnywhere, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/D3lyth/all-i-want-for-christmas)
-
-Please note that in order to directly open the project in Gitpod, you need to have the browser extension installed.
-A tutorial on how to do that can be found [here](https://www.gitpod.io/docs/configure/user-settings/browser-extension).
+[![Open in CodeAnywhere](https://d3lyth-all-i-want-for-ch-zj550np1g5.us2.codeanyapp.com/#/workspaces/all-i-want-for-christmas)
 
 #### Forking
 
@@ -504,24 +361,9 @@ Use this space to discuss any differences between the local version you've devel
 
 ## Credits
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section you need to reference where you got your content, media, and extra help from.
-It is common practice to use code from other repositories and tutorials,
-however, it is important to be very specific about these sources to avoid plagiarism.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ### Content
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Use this space to provide attribution links to any borrowed code snippets, elements, or resources.
-A few examples have been provided below to give you some ideas.
-
-Ideally, you should provide an actual link to every resource used, not just a generic link to the main site!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+All I Want For Christmas was created using the Task Manager Project by Tim Nelson (link below) as a basis and foundation for the code thata has then been edited, tweaked and changed for A.I.W.F.C.
 
 | Source | Location | Notes |
 | --- | --- | --- |
@@ -529,14 +371,8 @@ Ideally, you should provide an actual link to every resource used, not just a ge
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
 | [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
 | [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
-| [W3Schools](https://www.w3schools.com/css/css3_variables.asp) | entire site | how to use CSS :root variables |
 | [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
-| [Grid Garden](https://cssgridgarden.com) | entire site | modern responsive layouts |
-| [StackOverflow](https://stackoverflow.com/a/2450976) | quiz page | Fisher-Yates/Knuth shuffle in JS |
-| [YouTube](https://www.youtube.com/watch?v=YL1F4dCUlLc) | leaderboard | using `localStorage()` in JS for high scores |
-| [YouTube](https://www.youtube.com/watch?v=u51Zjlnui4Y) | PP3 terminal | tutorial for adding color to the Python terminal |
-| [strftime](https://strftime.org) | CRUD functionality | helpful tool to format date/time from string |
-| [WhiteNoise](http://whitenoise.evans.io) | entire site | hosting static files on Heroku temporarily |
+| [Task Manager](https://github.com/TravelTimN/flask-task-manager-project)| html / css / JS / Python | Used the project as a foundation for All I want For Christmas |
 
 ### Media
 
@@ -557,26 +393,15 @@ by sending yourself the following command: `!freemedia`.
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
 | [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-| [Lorem Picsum](https://picsum.photos) | home page | image | hero image background |
-| [Unsplash](https://unsplash.com) | product page | image | sample of fake products |
-| [Pixabay](https://pixabay.com) | gallery page | image | group of photos for gallery |
-| [Wallhere](https://wallhere.com) | footer | image | background wallpaper image in the footer |
-| [This Person Does Not Exist](https://thispersondoesnotexist.com) | testimonials | image | headshots of fake testimonial images |
-| [Audio Micro](https://www.audiomicro.com/free-sound-effects) | game page | audio | free audio files to generate the game sounds |
-| [Videvo](https://www.videvo.net/) | home page | video | background video on the hero section |
+
+
+
 | [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
 
 ### Acknowledgements
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Use this space to provide attribution to any supports that helped, encouraged, or supported you throughout the development stages of this project.
-A few examples have been provided below to give you some ideas.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project.
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project - his patience guidance and time has been invaluable.
+- I would also like to thank another Code Institute mentor, Sheryl Goldberg for their support throughout the development of this project - her words oof encouragement haave been a real boost, during her time as my mentor.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
-- I would like to thank my partner (John/Jane), for believing in me, and allowing me to make this transition into software development.
-- I would like to thank my employer, for supporting me in my career development change towards becoming a software developer.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com), especially Tarah Waters and Iris Smok, the course facillitator for the moral support; it kept me going during periods of self doubt and imposter syndrome.
+- I would like to thank my husband, my daughters and my friends for believing in me, and allowing me to make this transition into software development and supporting me when I needed it.
