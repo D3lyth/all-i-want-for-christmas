@@ -24,7 +24,35 @@
 <!-- Countdown timer -->
 <div class="center-align">
   <h4 class="timer-title">Time Until Christmas:</h4>
-  <div id="countdown">
+  
+<div id="countdown">
+    <!-- days -->
+    <p>
+        <span id="days" class="countdown-tile number">{{ days }}</span>
+        <span class="days-text">Days</span>
+    </p>
+
+    <!-- hours -->
+    <p>
+        <span id="hours" class="countdown-tile number">{{ hours }}</span>
+        <span class="hours-text">Hrs</span>
+    </p>
+
+    <!-- minutes -->
+    <p>
+        <span id="minutes" class="countdown-tile number">{{ minutes }}</span>
+        <span class="hours-text">Mins</span>
+    </p>
+
+    <!-- seconds -->
+    <p>
+        <span id="seconds" class="countdown-tile number">{{ seconds }}</span>
+        <span class="hours-text">Secs</span>
+    </p>
+</div>
+
+
+  <!-- <div id="countdown">
     <div class="countdown-tile">
       <div id="days" class="number">{{ days }}</div>
     </div>
@@ -45,36 +73,34 @@
     </div>
     <div class="seconds-text">Seconds</div>
   </div>
-</div>
+</div> -->
 
 <!-- Collapsible list for bought gifts -->
-
 <div class="bought-gifts">
   <h4 class="bought-gifts-title">Gifts Already Bought</h4>
   <ul class="collapsible">
-    {% set any_gifts_bought = false %} {# Initialize a flag to track if any
-    gifts are bought #} {% for gift in gifts %} {% if gift.bought %} {% set
-    any_gifts_bought = true %} {# Set the flag to true if there are bought gifts
-    #}
+    {% set any_gifts_bought = false %} {# Initialize a flag to track if any gifts are bought #} 
+    {% for gift in gifts %} 
+    {% if gift.bought %} 
+    {% set any_gifts_bought = true %} {# Set the flag to true if there are bought gifts#}
+
+<!--Collapsible header-->
     <li>
       <div class="collapsible-header">
-        {{ gift.gift_item }}
-        <i class="fas fa-check right-icon"></i>
+        {{ gift.gift_item }} <i class="fas fa-check right-icon"></i>
       </div>
+
+<!--Collapsible body-->
       <div class="collapsible-body">
         <p>For: {{ gift.list_name }}</p>
         <p>Cost: {{ gift.cost }}</p>
-        <a
-          href="{{ url_for('undo_bought', gift_id=gift._id) }}"
-          class="waves-effect waves-light btn undo-button undo-gift-button modal-trigger"
-          data-gift-id="{{ gift._id }}"
-          data-target="modal-undo-{{ gift._id }}">Undo</a
-        >
+        <a href="{{ url_for('undo_bought', gift_id=gift._id) }}" class="waves-effect waves-light btn undo-button undo-gift-button modal-trigger" data-gift-id="{{ gift._id }}"
+          data-target="modal-undo-{{ gift._id }}">Undo</a>
       </div>
     </li>
+
     <!-- inject the modals partials-template -->
-  {% include "partials/modals.html" %}
-    {% endif %} {% endfor %}
+    {% include "partials/modals.html" %} {% endif %} {% endfor %}
   </ul>
 </div>
 
