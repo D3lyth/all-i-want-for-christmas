@@ -1,3 +1,4 @@
+/* General Page styling */
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -8,6 +9,21 @@
 
 .btn-small {
     margin: 5px;
+}
+
+/* Xmas Lights */
+.xmaslights-image-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.xmaslights-image-container img {
+    width: 33.33%;
+    height: auto;
+    /* Maintain aspect ratio */
+    display: inline-block;
+    vertical-align: top;
 }
 
 .collapsible-header .col strong {
@@ -30,22 +46,17 @@
     width: 40px;
 }
 
+ /* Page titles styling */
 
-/* All pages styling */
-/* Xmas Lights */
-.xmaslights-image-container {
-    width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-}
-
-.xmaslights-image-container img {
-    width: 33.33%;
-    height: auto;
-    /* Maintain aspect ratio */
-    display: inline-block;
-    vertical-align: top;
-}
+ .allgifts-title,
+ .addgift-title,
+ .register-title,
+ .login-title,
+ .edit-gift-title {
+     font-family: 'League Script', cursive;
+     color: navy;
+     font-weight: 800;
+ }
 
 /* Welcome Page Styling */
 
@@ -68,7 +79,6 @@
 .welcome-title {
     font-size: 5rem;
     font-weight: bolder;
-
 }
 
 .welcome-description {
@@ -97,6 +107,136 @@
     text-align: center;
 }
 
+/* Profile Page Styling */
+
+
+.card-panel {
+    position: relative;
+    margin-top: 70px;
+    padding-top: 30px;
+}
+
+.snowcap-image {
+    position: absolute;
+    top: -20px;
+    left: -15px;
+    width: 110%;
+    height: 50%;
+}
+
+.profile-title {
+    font-family: 'Julius Sans One', sans-serif;
+    color: navy;
+    text-align: center;
+    margin: 10px;
+    font-size: 2rem;
+}
+
+.bought-gifts-title {
+    font-family: 'Julius Sans One', sans-serif;
+    color: rgb(8, 82, 8);
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    
+.right-icon {
+    color: green;
+    }
+
+
+.undo-button {
+    background-color: #ff5252;
+    color: #fff;
+    margin-top: 10px;
+    justify-items: center;
+   }
+
+   /* Countdown Tiles Styles */
+   .countdown-tile {
+       text-align: center;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       margin: 0 5px;
+       padding: 5px;
+       background-color: darkred;
+       border: 2px solid red;
+       border-radius: 4px;
+       height: 15vw;
+       width: 15vw;
+   }
+
+   #days,
+   #hours,
+   #minutes,
+   #seconds {
+       color: white;
+       font-size: 9vw;
+       text-align: center;
+       align-items: center;
+       font-weight: bolder;
+       justify-items: center;
+   }
+
+   .days-text,
+   .hours-text,
+   .minutes-text,
+   .seconds-text {
+       font-family: 'Julius Sans One', sans-serif;
+       color: BLACK;
+       margin-top: auto;
+
+   }
+
+   /* Center-align the countdown tiles container */
+   #countdown {
+       text-align: center;
+       padding: 2%;
+       margin: 2px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-evenly;
+   }
+
+   /* Define the style for the "Time Until Christmas" header */
+   #countdown-header {
+       font-size: 1.5rem;
+   }
+
+   .start-adding-gifts {
+       display: flex;
+       justify-content: center;
+       /* Center horizontally */
+   }
+
+
+   /* Define the style for the "Time Until Christmas" header */
+   .timer-title {
+       font-size: 5rem;
+       margin: 50px;
+       font-family: 'Amatic SC', sans-serif;
+   }
+
+   /* Style Gifts Already Bought */
+   .collapsible-header {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+
+   .right-icon {
+       color: green;
+   }
+
+/* RESPONSIVENESS */
 /* Add responsive styles for smaller screens */
 @media screen and (min-width: 300px) and (max-width: 992px) {
     .santa-hat {
@@ -125,192 +265,53 @@
         font-size: 1.3rem;
 
     }
+}
+  
+@media screen and (min-width: 300px) and (max-width: 992px) {
 
-    @media screen and (max-width: 768px) {
-
-        /* Adjust font sizes */
-        .welcome-title {
-            font-size: 3rem;
-        }
-
-        .welcome-description {
-            font-size: 2rem;
-        }
-
-        /* Adjust padding and margins */
-        .center-buttons {
-            width: 80%;
-        }
-
-        .register-button,
-        .login-button {
-            text-align: center;
-            font-size: 16px;
-        }
-
-        /* Switch to single-column layout */
-        .countdown-tile {
-            display: block;
-            margin: 10px auto;
-        }
-
-        /* Responsive navigation menu */
-        .sidenav-trigger {
-            display: block;
-        }
-
-        /* Adjust image responsiveness */
-        .santa-image {
-            width: 80px;
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-        }
-    }
-
-    /* General page styling */
-
-    .allgifts-title,
-    .addgift-title,
-    .register-title,
-    .login-title,
-    .edit-gift-title {
-        font-family: 'League Script', cursive;
-        color: navy;
-        font-weight: 800;
-
-    }
-
-
-
-
-    /* Profile Page styling */
-
-    .undo-button {
-        background-color: #ff5252;
-        color: #fff;
-        margin-top: 10px;
-    }
-
-    .card-panel {
-        position: relative;
-        margin-top: 70px;
-        padding-top: 30px;
-    }
-
-    .snowcap-image {
-        position: absolute;
-        top: -20px;
-        left: -15px;
-        width: 110%;
-        height: 50%;
-    }
-
-    .profile-title {
-        font-family: 'Julius Sans One', sans-serif;
-        color: navy;
-        text-align: center;
-        margin: 10px;
-        font-size: 2rem;
-    }
-
-    .bought-gifts-title {
-        font-family: 'Julius Sans One', sans-serif;
-        color: rgb(8, 82, 8);
-        text-align: center;
-        margin: 20px;
-        padding: 20px;
-        font-size: 2rem;
-    }
-
-
-    /* Countdown Tiles Styles */
-    .countdown-tile {
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 10px;
-        padding: 10px;
-        background-color: darkred;
-        border: 2px solid red;
-        border-radius: 4px;
-        height: 6rem;
-        width: 6rem;
-    }
-
-
-    #days,
-    #hours,
-    #minutes,
-    #seconds {
-        color: white;
+    /* Adjust font sizes */
+    .welcome-title {
         font-size: 3rem;
-        text-align: center;
-        align-items: center;
-        font-weight: bolder;
-    }
+        }
 
-    .days-text,
-    .hours-text,
-    .minutes-text,
-    .seconds-text {
+    .welcome-description {
         font-size: 2rem;
-        font-family: 'Julius Sans One', sans-serif;
-        color: BLACK;
-        margin-left: -4%;
-        margin-top: auto;
+        }
+ 
+    /* Adjust padding and margins */
+    .center-buttons {
+        width: 80%;
+        }
 
-    }
-
-
-    /* Center-align the countdown tiles container */
-    #countdown {
+    .register-button,
+    .login-button {
         text-align: center;
-        padding: 2%;
-        margin: 2px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        font-size: 16px;
+        }
+
+    /* Switch to single-column layout */
+    .countdown-tile {
+        display: block;
+        margin: 10px auto;
+        }
+
+    /* Responsive navigation menu */
+    .sidenav-trigger {
+        display: block;
+        }
+
+    /* Adjust image responsiveness */
+    .santa-image {
+        width: 80px;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        }
     }
-
-    /* Define the style for the "Time Until Christmas" header */
-    #countdown-header {
-        font-size: 1.5rem;
-    }
-
-    .start-adding-gifts {
-        display: flex;
-        justify-content: center;
-        /* Center horizontally */
-    }
-
-
-    /* Define the style for the "Time Until Christmas" header */
-    .timer-title {
-        font-size: 5rem;
-        margin: 50px;
-        font-family: 'Amatic SC', sans-serif;
-    }
-
-    /* Style Gifts Already Bought */
-
-    .collapsible-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .right-icon {
-        color: green;
-    }
-
-
-    /* Responsiveness */
 
     /* Adjust button styles for smaller screens */
-    @media screen and (min-width: 350px) {
-        .btn-small {
+    @media screen and (max-width: 486px) {
+        .btn-small, div.gift-buttons.col.s3 {
             padding: 5px 5px;
             font-size: 8px;
             height: 25px;
@@ -323,9 +324,5 @@
 
         div.col.s9 {
             font-size: 10px;
-        }
-
-        div.gift-buttons.col.s3 {
-            display: flex;
         }
     }
