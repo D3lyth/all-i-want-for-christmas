@@ -3,28 +3,24 @@
 <div class="row">
   <div class="col s12 m8 offset-m2">
     <div class="card-panel">
-      <img
-        src="{{ url_for('static', filename='images/snowcap.png') }}"
-        alt="snowcapped card"
-        class="snowcap-image"
-      />
+      <img src="{{ url_for('static', filename='images/snowcap.png') }}" alt="snowcapped card" class="snowcap-image"/>
       <h3 class="profile-title">{{ user.username }}'s Christmas Gifts</h3>
     </div>
   </div>
 </div>
 
+<!--Adding gifts button-->
 <div class="start-adding-gifts">
   <a href="{{ url_for('add_gift') }}">
-    <button class="waves-effect waves-light btn undo-button" type="submit">
-      Start adding your gifts!
-    </button>
+    <button class="waves-effect waves-light btn undo-button" type="submit">Start adding your gifts!</button>
   </a>
 </div>
 
-<!-- Countdown timer -->
+<!-- Countdown timer title-->
 <div class="center-align">
   <h4 class="timer-title">Time Until Christmas:</h4>
-  
+
+  <!--Countdown Timer-->
 <div id="countdown">
     <!-- days -->
     <p>
@@ -44,36 +40,12 @@
         <span class="hours-text">Mins</span>
     </p>
 
-    <!-- seconds -->
+<!-- seconds -->
     <p>
         <span id="seconds" class="countdown-tile number">{{ seconds }}</span>
         <span class="hours-text">Secs</span>
     </p>
 </div>
-
-
-  <!-- <div id="countdown">
-    <div class="countdown-tile">
-      <div id="days" class="number">{{ days }}</div>
-    </div>
-    <div class="days-text">Days</div>
-
-    <div class="countdown-tile">
-      <div id="hours" class="number">{{ hours }}</div>
-    </div>
-    <div class="hours-text">Hrs</div>
-
-    <div class="countdown-tile">
-      <div id="minutes" class="number">{{ minutes }}</div>
-    </div>
-    <div class="minutes-text">Minutes</div>
-
-    <div class="countdown-tile">
-      <div id="seconds" class="number">{{ seconds }}</div>
-    </div>
-    <div class="seconds-text">Seconds</div>
-  </div>
-</div> -->
 
 <!-- Collapsible list for bought gifts -->
 <div class="bought-gifts">
@@ -99,7 +71,7 @@
       </div>
     </li>
 
-    <!-- inject the modals partials-template -->
+<!-- inject the modals partials-template -->
     {% include "partials/modals.html" %} {% endif %} {% endfor %}
   </ul>
 </div>
