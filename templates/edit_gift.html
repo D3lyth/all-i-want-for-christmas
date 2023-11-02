@@ -10,7 +10,7 @@
       <div class="input-field col s12">
         <i class="fas fa-gifts prefix light-red-text text-darken-4"></i>
         <input
-          id="gift_item" name="gift_item" type="text" class="validate" required value="{{ gift_item.gift_item}}"/>
+          id="gift_item" name="gift_item" type="text" class="validate" required value="{{ gift_item.gift_item}}">
         <label for="gift_item">Gift Item:</label>
       </div>
     </div>
@@ -19,7 +19,7 @@
     <div class="row">
       <div class="input-field col s12">
         <i class="fas fa-pencil-alt prefix light-red-text text-darken-4"></i>
-        <input id="list_name" name="list_name" type="text" class="validate" required value="{{ gift_item.list_name }}"/>
+        <input id="list_name" name="list_name" type="text" class="validate" required value="{{ gift_item.list_name }}">
         <label for="list_name">For:</label>
       </div>
     </div>
@@ -28,7 +28,7 @@
     <div class="row">
       <div class="input-field col s12">
         <i class="fa fa-credit-card prefix light-red-text text-darken-4"></i>
-        <input id="cost" name="cost" type="text" class="validate" required value="{{ gift_item.cost }}"/>
+        <input id="cost" name="cost" type="text" class="validate" required value="{{ gift_item.cost }}">
         <label for="cost">Cost:</label>
       </div>
     </div>
@@ -37,7 +37,7 @@
     <div class="row">
       <div class="input-field col s12">
         <i class="fas fa-shopping-bag prefix light-red-text text-darken-4"></i>
-        <input id="where_to_buy" name="where_to_buy" type="text" class="validate" required value="{{ gift_item.where_to_buy }}"/>
+        <input id="where_to_buy" name="where_to_buy" type="text" class="validate" required value="{{ gift_item.where_to_buy }}">
         <label for="where_to_buy">Where To Buy:</label>
       </div>
     </div>
@@ -45,8 +45,7 @@
     <!-- submit button -->
     <div class="row">
       <div class="col s12 center-align">
-        <button type="submit" class="btn-large red darken-1 text-shadow modal-trigger" data-target="modal-edit-{{ gift_item._id }}">Edit Gift
-        </button>
+        <button type="submit" class="btn-large red darken-1 text-shadow modal-trigger" data-target="modal-edit-{{ gift_item._id }}">Edit Gift</button>
       </div>
     </div>
   </form>
