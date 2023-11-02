@@ -60,7 +60,7 @@ Google fonts was used for various fonts throughout the app.
 
 ### Returning Site Users
 
-- As a returning site user, I would like to be able to log on to my account to be able to access my gift list and profile thatI hve already started.
+- As a returning site user, I would like to be able to log on to my account to be able to access my gift list and profile that I have already started.
 - As a returning site user, I would like to continue to add gifts to my list by gift name, recipient, cost and where to buy, so that I can continue keep a record of what I need to buy.
 - As a returning site user, I would like to continue and go back to see all the gifts I have added to my list, so that I can see what gift ideas I already have.
 - As a returning site user, I would like to edit my gift, so that I can correct any mistakes I may have made when inputting the information.
