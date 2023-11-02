@@ -51,7 +51,7 @@ Google fonts was used for various fonts throughout the app.
 
 - As a new site user, I would like to register as a new user, so that I can begin using the christmas gift app.
 - As a new site user, I would like to start adding gifts to my list by gift name, recipient, cost and where to buy, so that I can keep a record of what I need to buy.
-- As a new site user, I would like to see all the gifts I have added to my list, so that I can see what gift ideas I alreaady have.
+- As a new site user, I would like to see all the gifts I have added to my list, so that I can see what gift ideas I already have.
 - As a new site user, I would like to edit my gift, so that I can correct any mistakes I may have made when inputting the information.
 - As a new site user, I would like to delete my gift, so that I can remove from my list so that I know that I don't need to buy it anymore.
 - As a new site user, I would like to add new gifts to my list, so that I can keep track of ideas that I might have for gifts for various people.
@@ -62,13 +62,13 @@ Google fonts was used for various fonts throughout the app.
 
 - As a returning site user, I would like to be able to log on to my account to be able to access my gift list and profile thatI hve already started.
 - As a returning site user, I would like to continue to add gifts to my list by gift name, recipient, cost and where to buy, so that I can continue keep a record of what I need to buy.
-- As a returning site user, I would like to continue and goo back to see all the gifts I have added to my list, so that I can see what gift ideas I alreaady have.
+- As a returning site user, I would like to continue and go back to see all the gifts I have added to my list, so that I can see what gift ideas I already have.
 - As a returning site user, I would like to edit my gift, so that I can correct any mistakes I may have made when inputting the information.
 - As a returning site user, I would like to delete my gift, so that I can remove from my list so that I know that I don't need to buy it anymore.
 - As a returning site user, I would like to be able to select a gift once I have bought it, so that I can see how many gift I have bought, how much I have spent, for whom I have bought gifts for, so that I can keep track of what I have already bought.
 - As a returning site user, I would like to undo the option of having bought a gift, so that I can remove something off my  bought list incase I pressed a button by mistake, or decided to return an item.
 - As a returning site user, I would liek to be able to search my gift list to be able to filter for recipient, where to buy, type of gift and cost to be able to make the shopping experience for getting the gifts more efficient.
-- As a returning site user, I would like too be able to log out of my account to keep my data safe.
+- As a returning site user, I would like to be able to log out of my account to keep my data safe.
 
 ### Site Admin
 
@@ -77,7 +77,7 @@ Google fonts was used for various fonts throughout the app.
 - As a site administrator, I should be able to review and moderate user-generated content, so that I can maintain the quality and appropriateness of content on the platform.
 - As a site administrator, I should be able to access and review user activity logs, so that I can investigate and resolve any user disputes, issues, or concerns.
 - As a site administrator, I should be able to update the site's features and functionality, so that I can keep the platform up to date and aligned with user needs and industry standards.
-- As a site administrator, I should be able to implement security measures such aas user authentication to protect user data and the site's integrity, so that I can ensure user data is safe and the platform is secure from potential threats.
+- As a site administrator, I should be able to implement security measures such as user authentication to protect user data and the site's integrity, so that I can ensure user data is safe and the platform is secure from potential threats.
 
 ## Wireframes
 
@@ -164,7 +164,7 @@ Both add and edit gift pages look the same except for the title of the page and 
 
 - **Reset Button**
 
-  - Pressing the reset button will clear all the searches made and return all the unbought gifts from the list baack to view.
+  - Pressing the reset button will clear all the searches made and return all the unbought gifts from the list back to view.
 
 ![screenshot](documentation/feature07.png)
 
@@ -194,13 +194,13 @@ Both add and edit gift pages look the same except for the title of the page and 
 
 - **Red Edit Button**
 
-  - Once the chaanges have been made to any of the fields in the gift information, the red edit button will update the data in the database and change will appear in the collapsible shown.
+  - Once the changes have been made to any of the fields in the gift information, the red edit button will update the data in the database and change will appear in the collapsible shown.
 
 ![screenshot](documentation/feature12.png)
 
 - **Add Gift**
 
-  - The green add button on the add gift page will creaate a new record on the database and appear on screen as part of the gift list.
+  - The green add button on the add gift page will create a new record on the database and appear on screen as part of the gift list.
 
 ![screenshot](documentation/feature13.png)
 
@@ -435,7 +435,7 @@ You can fork this repository by using the following steps:
 
 ### Local VS Deployment
 
-I have compaared both versions extensively and form what I can see There are no differences between local version and the live site deployed on Heroku.
+I have compared both versions extensively and form what I can see There are no differences between local version and the live site deployed on Heroku.
 
 ## Credits
 
@@ -466,7 +466,7 @@ All I Want For Christmas was created using the Task Manager Project by Tim Nelso
 ### Acknowledgements
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project - his patience guidance and time has been invaluable.
-- I would also like to thank another Code Institute mentor, Sheryl Goldberg for their support throughout the development of this project - her words oof encouragement haave been a real boost, during her time as my mentor.
+- I would also like to thank another Code Institute mentor, Sheryl Goldberg for their support throughout the development of this project - her words of encouragement have been a real boost, during her time as my mentor.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com), especially Tarah Waters and Iris Smok, the course facillitator for the moral support; it kept me going during periods of self doubt and imposter syndrome.
 - I would like to thank my husband, my daughters and my friends for believing in me, and allowing me to make this transition into software development and supporting me when I needed it.
