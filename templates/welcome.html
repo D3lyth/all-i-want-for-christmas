@@ -12,23 +12,15 @@
     <!-- login -->
     <h3 class="welcome-login-text">Login below to access your existing gift list!</h3>
     <div class="row center-buttons">
-        <a href="{{ url_for('profile_login') }}">
-        <button type="submit" class="login-button light-green darken-1 btn text-shadow">Log In</button>
-        </a>
+        <a href="{{ url_for('profile_login') }}" class="login-button light-green darken-1 btn text-shadow">Log In</a>
       </div>
-    </div>
   </form>
-</div>
 
 <!--No account yet link to register-->
     <h3 class="welcome-register-here">No account yet? Register here!</h3>
         <div class="row center-buttons">
-            <a href="{{ url_for('register') }}">
-                <button type="submit" class="login-button red darken-1 btn text-shadow">Register</button>
-            </a>
+            <a href="{{ url_for('register') }}" class="login-button red darken-1 btn text-shadow">Register</a>
         </div>
-    </div>
   </form>
-</div>
 
 {% endblock %}
