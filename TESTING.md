@@ -128,16 +128,16 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Welcome | Desktop | ![screenshot](documentation/lighthouse-welcome-desktop.png) | Few warnings |
 | Register | Mobile | ![screenshot](documentation/lighthouse-register-mobile.png) | Some minor warnings |
 | Register | Desktop | ![screenshot](documentation/lighthouse-register-desktop.png) | Few warnings |
-| Profile Login | Mobile | ![screenshot](documentation/lighthouse-profile-login-mobile.png) | Slow response time due to large images |
-| Profile Login | Desktop | ![screenshot](documentation/lighthouse-profile-login-desktop.png) | Slow response time due to large images |
+| Profile Login | Mobile | ![screenshot](documentation/lighthouse-login-mobile.png) | Slow response time due to large images |
+| Profile Login | Desktop | ![screenshot](documentation/lighthouse-login-desktop.png) | Slow response time due to large images |
 | Profile | Mobile | ![screenshot](documentation/lighthouse-profile-mobile.png) | Slow response time due to large images |
 | Profile | Desktop | ![screenshot](documentation/lighthouse-profile-desktop.png) | Slow response time due to large images |
-| Gift List Page | Mobile | ![screenshot](documentation/lighthouse-gift-list-mobile.png) | Slow response time due to large images |
-| Gift List Page| Desktop | ![screenshot](documentation/lighthouse-gift-list-desktop.png) | Slow response time due to large images |
-| Edit Gift | Mobile | ![screenshot](documentation/lighthouse-edit-list-mobile.png) | Slow response time due to large images |
-| Edit Gift | Desktop | ![screenshot](documentation/lighthouse-edit-list-desktop.png) | Slow response time due to large images |
-| Add Gift | Mobile | ![screenshot](documentation/lighthouse-add-gift-mobile.png) | Slow response time due to large images |
-| Add Gift | Desktop | ![screenshot](documentation/lighthouse-add-gift-desktop.png) | Slow response time due to large images |
+| Gift List Page | Mobile | ![screenshot](documentation/lighthouse-allgifts-mobile.png) | Slow response time due to large images |
+| Gift List Page| Desktop | ![screenshot](documentation/lighthouse-allgifts-desktop.png) | Slow response time due to large images |
+| Edit Gift | Mobile | ![screenshot](documentation/lighthouse-editgift-mobile.png) | Slow response time due to large images |
+| Edit Gift | Desktop | ![screenshot](documentation/lighthouse-editgift-desktop.png) | Slow response time due to large images |
+| Add Gift | Mobile | ![screenshot](documentation/lighthouse-addgift-mobile.png) | Slow response time due to large images |
+| Add Gift | Desktop | ![screenshot](documentation/lighthouse-addgift-desktop.png) | Slow response time due to large images |
 
 ## Defensive Programming
 
