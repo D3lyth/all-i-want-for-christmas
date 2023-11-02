@@ -15,20 +15,18 @@ Here's the link to thedeployed site:
 
 ## UX
 
-The ideas for designing the app was that it was a simple, and quick way to be able to record the gift ideas without over complicating the process. Often when seeing a good idea of a gift, people will think - I must remember thiis, but then when it comes to birthdays and christmas, they've forgotten what to get. Also, mst people when shopping can be in a rush or busy, therefore finding a way of noting these gifts in a simple, and quick manner was paramount.
+The ideas for designing the app was that it was a simple, and quick way to be able to record the gift ideas without over complicating the process. Often when seeing a good idea of a gift, people will think - I must remember this, but then when it comes to birthdays and christmas, they've forgotten what to get. Also, most people when shopping can be in a rush or busy, therefore finding a way of noting these gifts in a simple, and quick manner was paramount.
 
-Another 
+Another main feature for the app is that once the gifts have been added, they can be filtered by recipient, gift item or where to buy. This will be especially useful when rushing around the shops at Christmas - for example is someone were to find themselves in a shop like John Lewis - a quick search for 'John Lewis' will bring up all the gifts that need to be bought from thet specific shop, thus saving valuable time,
 
 ### Colour Scheme
 
-Traditional colours of green and red were chosed for the main theme of the app.
+With it being a christmaas themed app, traditional colours of green and red were chosen for the main theme of the app.
 
 - `#7cb342` used for the nav bar on all pages
 - `#078021` used for primary title page text
 - `#000080` used for title pages 
 - `#000000` used for list text
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
 
 ### Typography
 
@@ -41,6 +39,8 @@ Google fonts was used for various fonts throughout the app.
 - [Amatic SC](https://fonts.google.com/specimen/Amatic+SC) was used for the main welcome page text as it is a nice clean font.
 
 - [League Script](https://fonts.google.com/specimen/League+Script) was used for the titles of most pages. This was chosen to make it look like it was hand-written in pen, just as someone would do when writing lists.
+
+- [Grandstander](https://fonts.google.com/specimen/grandstander) was used for the flash messagesand the footer due to is clear and clean appearance.
 
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as form field icons.
 
@@ -90,80 +90,157 @@ Instructions on how to do Markdown `tables` start on line #213 on this site: <ht
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
-### Home Page Wireframes
+### Welcome Page Wireframes
 
 | Size | Screenshot |
 | --- | --- |
 | Mobile | ![screenshot](documentation/wireframes/mobile-home.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-home.png) |
 | Desktop | ![screenshot](documentation/wireframes/desktop-home.png) |
 
-### About Page Wireframes
+### Profile Page Wireframes
 
 | Size | Screenshot |
 | --- | --- |
 | Mobile | ![screenshot](documentation/wireframes/mobile-about.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-about.png) |
 | Desktop | ![screenshot](documentation/wireframes/desktop-about.png) |
 
-### Contact Page Wireframes
+### Add / Edit Gift Page Wireframes
 
 | Size | Screenshot |
 | --- | --- |
 | Mobile | ![screenshot](documentation/wireframes/mobile-contact.png) |
-| Tablet | ![screenshot](documentation/wireframes/tablet-contact.png) |
 | Desktop | ![screenshot](documentation/wireframes/desktop-contact.png) |
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+### Gift List Page Wireframes
 
-Repeat for any addition wireframe pages you have.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| Size | Screenshot |
+| --- | --- |
+| Mobile | ![screenshot](documentation/wireframes/mobile-contact.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-contact.png) |
 
 ## Features
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, you should go over the different parts of your project,
-and describe each in a sentence or so.
-
-You will need to explain what value each of the features provides for the user,
-focusing on who this website is for, what it is that they want to achieve,
-and how your project is the best way to help them achieve these things.
-
-For some/all of your features, you may choose to reference the specific project files that implement them.
-
-IMPORTANT: Remember to always include a screenshot of each individual feature!
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 ### Existing Features
 
-- **Title for feature #1**
+- **Link to Welcome Page**
 
-  - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+  - To follow convention - the logo has been linked to always return to the welcome/home page for he application.
 
 ![screenshot](documentation/feature01.png)
 
-- **Title for feature #2**
+- **Login Form**
 
-  - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+  - The log in form has been set up to allow users to return to their account once they have set up a username and password as a form of user authentication.
 
 ![screenshot](documentation/feature02.png)
 
-- **Title for feature #3**
+- **Register Form**
 
-  - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+  - As with the log in form, the register form has been set up to allow users to set up an account with a username and password as a form of user authentication.
 
 ![screenshot](documentation/feature03.png)
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
+- **Start Adding Gifts Button**
 
-Repeat as necessary for as many features as your site contains.
+  - This button on the profile page will allow users to be taken straight to the add gifts form so that the user will be able to start populating their christmas gifts quickly and efficiently with the important information, such as repipient, gift name, where to buy and cost.
 
-Hint: the more, the merrier!
+![screenshot](documentation/feature04.png)
 
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+- **Countdown Timer**
+
+  - The countdown timer is placed on the profile page to remind the user how many days there are between now and Christmas - to ensure teh the user dooesnn't leave the gift buying until the last minute.
+
+![screenshot](documentation/feature05.png)
+
+- **Search/Gift Filter**
+
+  - To allow for quick use, all gift are added to one big gift list that is specific to a user. But the esarch feature on the 'gifts to buy' page is very useful to be able to quickly search the whole gift list for particular gifts, gifts for particular family members, and the most useful of all - where to buy. A quick search for a store will bring up all the gifts that need to be purchaced - makibng sure that the user doesn't forget anything!
+
+![screenshot](documentation/feature06.png)
+
+- **Reset Button**
+
+  - Pressing the reset button will clear all the searches made and return all the unbought gifts from the list baack to view.
+
+![screenshot](documentation/feature07.png)
+
+- **Search Button**
+
+  - Typing a keyword (or part of a key word) into the search bar and pressing the search button with filter and show only the relevant gifts.
+
+![screenshot](documentation/feature08.png)
+
+- **Delete Button**
+
+  - If a gift has been listed in error, or a gifn is no longer required to be bought, pressing the delete button will get rid of the gift completely. A pop up will be shown to confirm with the user whether they do need to delete.
+
+![screenshot](documentation/feature09.png)
+
+- **Got It! Button**
+
+  - Once a gift has been bought, the 'Got It!' button is pressed - this will remove the gift from the 'to buy' list on the 'Gifts to Buy' page, to the 'Gifts Allready Bought' list on the profile page. This will allow the user to keep track of all the gifts bought.
+
+![screenshot](documentation/feature10.png)
+
+- **Blue Edit Button**
+
+  - Within the collapsible body of the gift item, the edit button will take the user to a form to allow them to make any chnages to the gift that has been listed. Changes may include- a change of recipient, a change in the cost, or the shop may change.
+
+![screenshot](documentation/feature11.png)
+
+- **Red Edit Button**
+
+  - Once the chaanges have been made to any of the fields in the gift information, the red edit button will update the data in the database and change will appear in the collapsible shown.
+
+![screenshot](documentation/feature12.png)
+
+- **Add Gift**
+
+  - The green add button on the add gift page will creaate a new record on the database and appear on screen as part of the gift list.
+
+![screenshot](documentation/feature13.png)
+
+- **Navigation Tabs**
+
+  - The navigation tabs in the nav bar allows for the user to navigate themselves around the site in an intuitive manner.
+
+![screenshot](documentation/feature14.png)
+
+- **Burger Menu**
+
+  - As with the navigation tabs, the burger menu allows for a sidebar for ease of navigation around the site on smaller screens such as mobiles.
+
+![screenshot](documentation/feature15.png)
+
+- **Side Bar**
+
+  - As with the navigation tabs, the sidebar allows for ease of navigation around the site on smaller screens such as mobiles.
+
+![screenshot](documentation/feature16.png)
+
+- **Collapsible Bought List**
+
+  - Any gifts marked as bought (got it button) will be placed on the 'gifts bought' list on the profile page. This is so that the user can keep track of the gifts.
+
+![screenshot](documentation/feature17.png)
+
+- **Undo Button**
+
+  - In case of a gifts being marked as bought in error (or returned to the store) an undo button can be pressed for the specifc gift. A modal will pop up to confirm the action. If confirmed, the gift will move from the 'bought list', back to the 'to buy' list.
+
+![screenshot](documentation/feature18.png)
+
+- **Login Button**
+
+  - The login button will take the user to the log in form, to allow users to access their account with a username and password as a form of user authentication.
+
+![screenshot](documentation/feature19.png)
+
+- **Register Button**
+
+  - The register button will take the user to the register form to allow users to set up an account with a username and password as a form of user authentication.
+
+![screenshot](documentation/feature20.png)
 
 ### Future Features
 
@@ -325,6 +402,7 @@ os.environ.setdefault("DB_URL", "user's own value")
 os.environ.setdefault("DEBUG", "True")
 os.environ.setdefault("DEVELOPMENT", "True")
 ```
+
 #### Cloning
 
 You can clone the repository by following these steps:
