@@ -70,7 +70,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | XL Monitor | ![screenshot](documentation/responsive-xl.png) | Scaling starts to have minor issues |
 | 4K Monitor | ![screenshot](documentation/responsive-4k.png) | Noticeable scaling issues |
 | iPad Air | ![screenshot](documentation/responsive-ipadair.jpeg) | Works as expected ||
-| iPhone 14 | ![screenshot](documentation/responsive-iphone4.jpeg) | Works as expected |
+| iPhone 14 | ![screenshot](documentation/responsive-iphone14.jpeg) | Works as expected |
 
 ## Lighthouse Audit
 
