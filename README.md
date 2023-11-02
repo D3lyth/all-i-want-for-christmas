@@ -127,7 +127,7 @@ Both add and edit gift pages look the same except for the title of the page and 
 
 - **Link to Welcome Page**
 
-  - To follow convention - the logo has been linked to always return to the welcome/home page for he application.
+  - To follow convention - the logo has been linked to always return to the welcome/home page for the application.
 
 ![screenshot](documentation/feature01.png)
 
@@ -151,13 +151,13 @@ Both add and edit gift pages look the same except for the title of the page and 
 
 - **Countdown Timer**
 
-  - The countdown timer is placed on the profile page to remind the user how many days there are between now and Christmas - to ensure teh the user dooesnn't leave the gift buying until the last minute.
+  - The countdown timer is placed on the profile page to remind the user how many days there are between now and Christmas - to ensure the the user doesn't leave the gift buying until the last minute.
 
 ![screenshot](documentation/feature05.png)
 
 - **Search/Gift Filter**
 
-  - To allow for quick use, all gift are added to one big gift list that is specific to a user. But the esarch feature on the 'gifts to buy' page is very useful to be able to quickly search the whole gift list for particular gifts, gifts for particular family members, and the most useful of all - where to buy. A quick search for a store will bring up all the gifts that need to be purchased - making sure that the user doesn't forget anything!
+  - To allow for quick use, all gift are added to one big gift list that is specific to a user. But the search feature on the 'gifts to buy' page is very useful to be able to quickly search the whole gift list for particular gifts, gifts for particular family members, and the most useful of all - where to buy. A quick search for a store will bring up all the gifts that need to be purchased - making sure that the user doesn't forget anything!
 
 ![screenshot](documentation/feature06.png)
 
@@ -169,25 +169,25 @@ Both add and edit gift pages look the same except for the title of the page and 
 
 - **Search Button**
 
-  - Typing a keyword (or part of a key word) into the search bar and pressing the search button with filter and show only the relevant gifts.
+  - Typing a keyword (or part of a key word) into the search bar and pressing the search button will filter and show only the relevant gifts.
 
 ![screenshot](documentation/feature08.png)
 
 - **Delete Button**
 
-  - If a gift has been listed in error, or a gifn is no longer required to be bought, pressing the delete button will get rid of the gift completely. A pop up will be shown to confirm with the user whether they do need to delete.
+  - If a gift has been listed in error, or a gift is no longer required to be bought, pressing the delete button will get rid of the gift completely. A pop up will be shown to confirm with the user whether they do need to delete.
 
 ![screenshot](documentation/feature09.png)
 
 - **Got It! Button**
 
-  - Once a gift has been bought, the 'Got It!' button is pressed - this will remove the gift from the 'to buy' list on the 'Gifts to Buy' page, to the 'Gifts Allready Bought' list on the profile page. This will allow the user to keep track of all the gifts bought.
+  - Once a gift has been bought, the 'Got It!' button is pressed - this will remove the gift from the 'to buy' list on the 'Gifts to Buy' page, to the 'Gifts Already Bought' list on the profile page. This will allow the user to keep track of all the gifts bought.
 
 ![screenshot](documentation/feature10.png)
 
 - **Blue Edit Button**
 
-  - Within the collapsible body of the gift item, the edit button will take the user to a form to allow them to make any chnages to the gift that has been listed. Changes may include- a change of recipient, a change in the cost, or the shop may change.
+  - Within the collapsible body of the gift item, the edit button will take the user to a form to allow them to make any chnages to the gift that has been listed. Changes may include - a change of recipient, a change in the cost, or the shop may change.
 
 ![screenshot](documentation/feature11.png)
 
@@ -434,7 +434,7 @@ You can fork this repository by using the following steps:
 
 ### Local VS Deployment
 
-I have compared both versions extensively and form what I can see There are no differences between local version and the live site deployed on Heroku.
+I have compared both versions extensively and from what I can see, there are no differences between local version and the live site deployed on Heroku.
 
 ## Credits
 
@@ -465,7 +465,7 @@ All I Want For Christmas was created using the Task Manager Project by Tim Nelso
 ### Acknowledgements
 
 - I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for their support throughout the development of this project - his patience guidance and time has been invaluable.
-- I would also like to thank another Code Institute mentor, Sheryl Goldberg for their support throughout the development of this project - her words of encouragement have been a real boost, during her time as my mentor.
+- I would also like to thank another Code Institute mentor, Sheryl Goldberg for their support throughout the development of this project - her words of encouragement have been a real boost during her time as my mentor.
 - I would like to thank the [Code Institute](https://codeinstitute.net) tutor team for their assistance with troubleshooting and debugging some project issues.
 - I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com), especially Tarah Waters and Iris Smok, the course facillitator for the moral support; it kept me going during periods of self doubt and imposter syndrome.
 - I would like to thank my husband, my daughters and my friends for believing in me, and allowing me to make this transition into software development and supporting me when I needed it.
