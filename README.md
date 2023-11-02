@@ -18,7 +18,7 @@ Here's the link to the deployed site: <https://all-i-want-for-christmas-11c6c444
 
 The ideas for designing the app was that it was a simple, and quick way to be able to record the gift ideas without over complicating the process. Often when seeing a good idea of a gift, people will think - I must remember this, but then when it comes to birthdays and christmas, they've forgotten what to get. Also, most people when shopping can be in a rush or busy, therefore finding a way of noting these gifts in a simple, and quick manner was paramount.
 
-Another main feature for the app is that once the gifts have been added, they can be filtered by recipient, gift item or where to buy. This will be especially useful when rushing around the shops at Christmas - for example is someone were to find themselves in a shop like John Lewis - a quick search for 'John Lewis' will bring up all the gifts that need to be bought from thet specific shop, thus saving valuable time,
+Another main feature for the app is that once the gifts have been added, they can be filtered by recipient, gift item or where to buy. This will be especially useful when rushing around the shops at Christmas - for example is someone were to find themselves in a shop like John Lewis - a quick search for 'John Lewis' will bring up all the gifts that need to be bought from thet specific shop, thus saving valuable time.
 
 ### Colour Scheme
 
@@ -96,31 +96,38 @@ I've used [GoodNotes](https://www.goodnotes.com) iPad and Apple pencil to design
 
 | Size | Screenshot |
 | --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-welcome.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-welcome.png) |
+| Mobile | ![screenshot](documentation/wireframes/mobile-welcome.jpg) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-welcome.jpg) |
+
+### Register / Login Page Wireframes
+
+Both register and login pages look the same except for the title of the page and the text on the button, therefore the register page is here as an example. The mobile page looks exactly the same too, so see the desktop image for reference.
+
+| Size | Screenshot |
+| --- | --- |
+| Desktop | ![screenshot](documentation/wireframes/desktop-profile.jpg) |
 
 ### Profile Page Wireframes
 
 | Size | Screenshot |
 | --- | --- |
 | Mobile | ![screenshot](documentation/wireframes/mobile-profile.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-profile.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-profile.jpg) |
 
 ### Add / Edit Gift Page Wireframes
 
-Both add and edit gift pages look the same except for the title of the page and the text on the button, therefore the add gift page is here as an example.
+Both add and edit gift pages look the same except for the title of the page and the text on the button, therefore the add gift page is here as an example. The mobile page looks exactly the same too, so see the desktop image for reference.
 
 | Size | Screenshot |
 | --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-addgift.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-addgift.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-addgift.jpg) |
 
 ### Gift List Page Wireframes
 
 | Size | Screenshot |
 | --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-giftlist.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-giftlist.png) |
+| Mobile | ![screenshot](documentation/wireframes/mobile-giftlist.jpg) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-giftlist.jpg) |
 
 ## Features
 
