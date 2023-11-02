@@ -64,7 +64,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Device | Screenshot | Notes |
 | --- | --- | --- |
 | Mobile (DevTools) | ![screenshot](documentation/responsive-mobile-dt.png) | Works as expected |
-| Tablet (DevTools) | ![screenshot](document1ation/responsive-tablet-dt.png) | Works as expected |
+| Tablet (DevTools) | ![screenshot](documentation/responsive-tablet-dt.png) | Works as expected |
 | Desktop | ![screenshot](documentation/responsive-desktop.png) | Works as expected |
 | XL Monitor | ![screenshot](documentation/responsive-xl.png) | Scaling starts to have minor issues |
 | 4K Monitor | ![screenshot](documentation/responsive-4k.png) | Noticeable scaling issues |
@@ -131,6 +131,8 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## User Story Testing
 
+User stories and fatures were tested manually as shown below:
+
 | User Story | Screenshot |
 | --- | --- |
 | As a new site user and returning user, I would like to click on the logo, so that I can return to the welcome page. | ![screenshot](documentation/feature01.png) |
@@ -170,16 +172,7 @@ Any remaining open issues can be tracked [here](https://github.com/D3lyth/all-i-
 
 ## Unfixed Bugs
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-You will need to mention unfixed bugs and why they were not fixed.
-This section should include shortcomings of the frameworks or technologies used.
-Although time can be a big variable to consider, paucity of time and difficulty understanding
-implementation is not a valid reason to leave bugs unfixed.
-
-If you've identified any unfixed bugs, no matter how small, be sure to list them here.
-It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
-they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
+Some of the unfixed bugs are as noted below:
 
 - On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
 
