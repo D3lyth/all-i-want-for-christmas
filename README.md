@@ -156,7 +156,7 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 - **Search/Gift Filter**
 
-  - To allow for quick use, all gift are added to one big gift list that is specific to a user. But the esarch feature on the 'gifts to buy' page is very useful to be able to quickly search the whole gift list for particular gifts, gifts for particular family members, and the most useful of all - where to buy. A quick search for a store will bring up all the gifts that need to be purchaced - makibng sure that the user doesn't forget anything!
+  - To allow for quick use, all gift are added to one big gift list that is specific to a user. But the esarch feature on the 'gifts to buy' page is very useful to be able to quickly search the whole gift list for particular gifts, gifts for particular family members, and the most useful of all - where to buy. A quick search for a store will bring up all the gifts that need to be purchased - making sure that the user doesn't forget anything!
 
 ![screenshot](documentation/feature06.png)
 
