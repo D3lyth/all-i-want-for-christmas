@@ -73,11 +73,12 @@ Google fonts was used for various fonts throughout the app.
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a site administrator, I should be able to manage user accounts, so that I can assist users with account-related issues and ensure the site's user database is well-maintained.
+- As a site administrator, I should be able to monitor and manage the site's overall performance, so that I can ensure the site operates smoothly and efficiently for all users.
+- As a site administrator, I should be able to review and moderate user-generated content, so that I can maintain the quality and appropriateness of content on the platform.
+- As a site administrator, I should be able to access and review user activity logs, so that I can investigate and resolve any user disputes, issues, or concerns.
+- As a site administrator, I should be able to update the site's features and functionality, so that I can keep the platform up to date and aligned with user needs and industry standards.
+- As a site administrator, I should be able to implement security measures such aas user authentication to protect user data and the site's integrity, so that I can ensure user data is safe and the platform is secure from potential threats.
 
 ## Wireframes
 
