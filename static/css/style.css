@@ -175,7 +175,6 @@ h1.welcome-title {
 
 /* Profile Page Styling */
 
-
 .card-panel {
     position: relative;
     margin-top: 70px;
@@ -225,81 +224,79 @@ h1.welcome-title {
     justify-items: center;
    }
 
-   /* Countdown Tiles Styles */
-   .countdown-tile {
-       text-align: center;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       margin: 0 5px;
-       padding: 5px;
-       background-color: darkred;
-       border: 2px solid red;
-       border-radius: 4px;
-       height: 15vw;
-       width: 15vw;
+/* Countdown Tiles Styles */
+.countdown-tile {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    padding: 5px;
+    background-color: darkred;
+    border: 2px solid red;
+    border-radius: 4px;
+    height: 15vw;
+    width: 15vw;
    }
 
-   #days,
-   #hours,
-   #minutes,
-   #seconds {
-       color: white;
-       font-size: 9vw;
-       text-align: center;
-       align-items: center;
-       font-weight: bolder;
-       justify-items: center;
+#days,
+#hours,
+#minutes,
+#seconds {
+    color: white;
+    font-size: 9vw;
+    text-align: center;
+    align-items: center;
+    font-weight: bolder;
+    justify-items: center;
    }
 
-   .days-text,
-   .hours-text,
-   .minutes-text,
-   .seconds-text {
-       font-family: 'Julius Sans One', sans-serif;
-       color: BLACK;
-       margin-top: auto;
-
+.days-text,
+.hours-text,
+.minutes-text,
+.seconds-text {
+    font-family: 'Julius Sans One', sans-serif;
+    color: BLACK;
+    margin-top: auto;
    }
 
-   /* Center-align the countdown tiles container */
-   #countdown {
-       text-align: center;
-       padding: 2%;
-       margin: 2px;
-       display: flex;
-       flex-direction: row;
-       justify-content: space-evenly;
+/* Center-align the countdown tiles container */
+#countdown {
+    text-align: center;
+    padding: 2%;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
    }
 
-   /* Define the style for the "Time Until Christmas" header */
-   #countdown-header {
-       font-size: 1.5rem;
+/* Define the style for the "Time Until Christmas" header */
+#countdown-header {
+    font-size: 1.5rem;
    }
 
-   .start-adding-gifts {
-       display: flex;
-       justify-content: center;
-       /* Center horizontally */
+ .start-adding-gifts {
+    display: flex;
+    justify-content: center;
    }
 
 
-   /* Define the style for the "Time Until Christmas" header */
-   .timer-title {
-       font-size: 5rem;
-       margin: 50px;
-       font-family: 'Amatic SC', sans-serif;
+/* Define the style for the "Time Until Christmas" header */
+.timer-title {
+    font-size: 5rem;
+     margin: 50px;
+    font-family: 'Amatic SC', sans-serif;
    }
 
-   /* Style Gifts Already Bought */
-   .collapsible-header {
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
+/* Style Gifts Already Bought */
+.collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
    }
 
-   .right-icon {
-       color: #008000;
+.right-icon {
+     color: #008000;
    }
 
 /* RESPONSIVENESS */
@@ -317,13 +314,12 @@ h1.welcome-title {
         font-family: 'Delicious Handrawn', cursive;
         margin-left: 10px;
         top: 5px;
-    }
+        }
 
     nav .brand-logo {
         display: inline-block;
         font-size: 1.3rem;
-
-    }
+        }
 }
   
 @media screen and (min-width: 300px) and (max-width: 992px) {
@@ -371,9 +367,9 @@ h1.welcome-title {
             justify-content: center;
             text-align: center;
             flex-direction: row;
-        }
+            }
 
         div.col.s9 {
             font-size: 10px;
-        }
+            }
     }
