@@ -1,6 +1,6 @@
-![screenshot](documentation/feature01.png)
-
 # ALL I WANT FOR CHRISTMAS
+
+![screenshot](documentation/feature01.png)
 
 Welcome to All I Want For Christmas - the app that allows you to keep a record of all the gifts that you need to get during the busy holiday season and 'tick them off' once they have been bought.
 
