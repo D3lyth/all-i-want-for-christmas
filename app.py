@@ -150,9 +150,6 @@ def profile(username):
         gifts = list(mongo.db.gifts.find({"created_by": username}))
         return render_template("profile.html", user=user, gifts=gifts)
 
-        # Calculate the countdown values
-        countdown_values = christmas_countdown()
-
     # take the incorrect user to their own profile
     return redirect(url_for("welcome", username=session["user"]))
 
