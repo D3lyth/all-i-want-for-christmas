@@ -1,3 +1,5 @@
+![screenshot](documentation/feature01.png)
+
 # ALL I WANT FOR CHRISTMAS
 
 Welcome to All I Want For Christmas - the app that allows you to keep a record of all the gifts that you need to get during the busy holiday season and 'tick them off' once they have been bought.
@@ -8,7 +10,7 @@ This app would be useful for anyone buying gifts during Christmas time - most pe
 
 Users will also be able to delete gifts if they no longer need to buy them, gifts can be edited if thiings such as prices or where to buy changes.
 
-Here's the link to thedeployed site:
+Here's the link to the deployed site:
 <https://all-i-want-for-christmas-11c6c44413ce.herokuapp.com/>
 
 ![screenshot](documentation/mockup.png)
@@ -418,7 +420,7 @@ You can clone the repository by following these steps:
 
 Alternatively, if using CodeAnywhere, you can click below to create your own workspace using this repository.
 
-[![Open in CodeAnywhere](https://d3lyth-all-i-want-for-ch-zj550np1g5.us2.codeanyapp.com/#/workspaces/all-i-want-for-christmas)
+![Open in CodeAnywhere](https://d3lyth-all-i-want-for-ch-zj550np1g5.us2.codeanyapp.com/#/workspaces/all-i-want-for-christmas)
 
 #### Forking
 
