@@ -69,8 +69,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Desktop | ![screenshot](documentation/responsive-desktop.png) | Works as expected |
 | XL Monitor | ![screenshot](documentation/responsive-xl.png) | Scaling starts to have minor issues |
 | 4K Monitor | ![screenshot](documentation/responsive-4k.png) | Noticeable scaling issues |
-| Google Pixel 7 Pro | ![screenshot](documentation/responsive-pixel.png) | Works as expected 
-| iPhone 14 | ![screenshot](documentation/responsive-ipadair.jpeg) | Works as expected ||
+| iPad Air | ![screenshot](documentation/responsive-ipadair.jpeg) | Works as expected ||
 | iPhone 14 | ![screenshot](documentation/responsive-iphone4.jpeg) | Works as expected |
 
 ## Lighthouse Audit
@@ -96,40 +95,6 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## Defensive Programming
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Defensive programming (defensive design) is extremely important!
-
-When building projects that accept user inputs or forms, you should always test the level of security for each.
-Examples of this could include (not limited to):
-
-Forms:
-
-- Users cannot submit an empty form
-- Users must enter valid email addresses
-
-PP3 (Python-only):
-
-- Users must enter a valid letter/word/string when prompted
-- Users must choose from a specific list only
-
-Flask/Django:
-
-- Users cannot brute-force a URL to navigate to a restricted page
-- Users cannot perform CRUD functionality while logged-out
-- User-A should not be able to manipulate data belonging to User-B, or vice versa
-- Non-Authenticated users should not be able to access pages that require authentication
-- Standard users should not be able to access pages intended for superusers
-
-You'll want to test all functionality on your application, whether it's a standard form,
-or uses CRUD functionality for data manipulation on a database.
-Make sure to include the `required` attribute on any form-fields that should be mandatory.
-Try to access various pages on your site as different user types (User-A, User-B, guest user, admin, superuser).
-
-You should include any manual tests performed, and the expected results/outcome.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 Defensive programming was manually tested with the below user acceptance testing:
 
 | Page | User Action | Expected Result | Pass/Fail | Comments |
@@ -139,53 +104,33 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on Profile link in navbar | Redirection to Profile page | Pass | |
 | | Click on Profile link in sidebar | Redirection to Profile page | Pass | |
 | | Click on Register link in navbar | Redirection to Register page | Pass | |
-| Gallery Page | | | | |
-| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
-| | Load gallery images | All images load as expected | Pass | |
-| Contact Page | | | | |
-| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
-| Sign Up | | | | |
-| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
-| | Confirm email | Redirects user to blank Sign In page | Pass | |
+| | Click on Register link in sidebar | Redirection to Register page | Pass | |
+| | Click on Gifts link in navbar | Redirection to Gifts page | Pass | |
+| | Click on Gifts link in sidebar | Redirection to Gifts page | Pass | |
+| | Click on Add Gift link in navbar | Redirection to Add Gift page | Pass | |
+| | Click on Add Gift link in sidebar | Redirection to Add Gift page | Pass | |
+| | Click on Register button | Redirection to Register page | Pass | |
+| | Enter username on register form | Field will accept freeform text | Pass | |
+| | Enter valid password | Field will only accept password format | Pass | Registration successful flash massage shown for successful new profile |
 | Log In | | | | |
 | | Click on the Login link | Redirection to Login page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password | Field will only accept password format | Pass | |
-| | Click Login button | Redirects user to home page | Pass | |
+| | Enter username on login page | Field will accept freeform text | Pass | |
+| | Enter valid password on login page | Field will only accept password of with a certain format/length | Pass | User you are logged in message if successfully logged in |
 | Log Out | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| | Click Logout button | Redirects user to logout page | Pass | Flash message will confirm log out |
 | Profile | | | | |
 | | Click on Profile button | User will be redirected to the Profile page | Pass | |
-| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
-| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Repeat for all other tests, as applicable to your own site.
-The aforementioned tests are just an example of a few different project scenarios.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| Add Gift | | | | |
+| | Click on the Edit button | User will be redirected to the edit gift page | Pass | |
+| | Click on the Delete button | User will be redirected to the gift page | Pass | Modal message will appear to confirm deletion of gift |
+| | Click on the Got It! button | User will be redirected to the gift page | Pass | |
+| All Gifs / Profile Page | | | | |
+| | Click on the Undo button | User will be redirected to the Profile page | Pass | Modal message will appear to confirm if user wants to undo action|
+| | Click on the Delete button | User will be redirected to the gift page | Pass | Modal message will appear to confirm deletion of gift |
+| | Click on the Got It! button | User will be redirected to the gift page | Pass | |
+| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile or login page |
 
 ## User Story Testing
-
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Testing user stories is actually quite simple, once you've already got the stories defined on your README.
-
-Most of your project's **features** should already align with the **user stories**,
-so this should as simple as creating a table with the user story, matching with the re-used screenshot
-from the respective feature.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 | User Story | Screenshot |
 | --- | --- |
@@ -198,7 +143,18 @@ from the respective feature.
 | As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature07.png) |
 | As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature08.png) |
 | As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/feature09.png) |
-| repeat for all remaining user stories | x |
+
+| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature10.png) |
+| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature11.png) |
+| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature12.png) |
+| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature13.png) |
+| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature14.png) |
+| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature15.png) |
+| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature16.png) |
+| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature17.png) |
+| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature18.png) |
+| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature19.png) |
+| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feature20.png) |
 
 ## Automated Testing
 
