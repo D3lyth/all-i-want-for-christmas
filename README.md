@@ -10,8 +10,7 @@ This app would be useful for anyone buying gifts during Christmas time - most pe
 
 Users will also be able to delete gifts if they no longer need to buy them, gifts can be edited if thiings such as prices or where to buy changes.
 
-Here's the link to the deployed site:
-<https://all-i-want-for-christmas-11c6c44413ce.herokuapp.com/>
+Here's the link to the deployed site: <https://all-i-want-for-christmas-11c6c44413ce.herokuapp.com/>
 
 ![screenshot](documentation/mockup.png)
 
@@ -23,11 +22,11 @@ Another main feature for the app is that once the gifts have been added, they ca
 
 ### Colour Scheme
 
-With it being a christmaas themed app, traditional colours of green and red were chosen for the main theme of the app.
+With it being a christmas themed app, traditional colours of green and red were chosen for the main theme of the app along with christms themed imges such as Santa and Christmas lights.
 
 - `#7cb342` used for the nav bar on all pages
 - `#078021` used for primary title page text
-- `#000080` used for title pages 
+- `#000080` used for title pages
 - `#000000` used for list text
 
 ### Typography
@@ -91,35 +90,37 @@ Instructions on how to do Markdown `tables` start on line #213 on this site: <ht
 🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
 
 To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
-I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
+I've used [GoodNotes](https://www.goodnotes.com) iPad and Apple pencil to design my site wireframes by hand as I enjoy the process.
 
 ### Welcome Page Wireframes
 
 | Size | Screenshot |
 | --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-home.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-home.png) |
+| Mobile | ![screenshot](documentation/wireframes/mobile-welcome.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-welcome.png) |
 
 ### Profile Page Wireframes
 
 | Size | Screenshot |
 | --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-about.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-about.png) |
+| Mobile | ![screenshot](documentation/wireframes/mobile-profile.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-profile.png) |
 
 ### Add / Edit Gift Page Wireframes
 
+Both add and edit gift pages look the same except for the title of the page and the text on the button, therefore the add gift page is here as an example.
+
 | Size | Screenshot |
 | --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-contact.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-contact.png) |
+| Mobile | ![screenshot](documentation/wireframes/mobile-addgift.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-addgift.png) |
 
 ### Gift List Page Wireframes
 
 | Size | Screenshot |
 | --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-contact.png) |
-| Desktop | ![screenshot](documentation/wireframes/desktop-contact.png) |
+| Mobile | ![screenshot](documentation/wireframes/mobile-giftlist.png) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-giftlist.png) |
 
 ## Features
 
@@ -421,7 +422,7 @@ You can clone the repository by following these steps:
 
 Alternatively, if using CodeAnywhere, you can click below to create your own workspace using this repository.
 
-![Open in CodeAnywhere](https://d3lyth-all-i-want-for-ch-zj550np1g5.us2.codeanyapp.com/#/workspaces/all-i-want-for-christmas)
+[Open in CodeAnywhere](https://d3lyth-all-i-want-for-ch-zj550np1g5.us2.codeanyapp.com/#/workspaces/all-i-want-for-christmas)
 
 #### Forking
 
@@ -434,50 +435,33 @@ You can fork this repository by using the following steps:
 
 ### Local VS Deployment
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Use this space to discuss any differences between the local version you've developed, and the live deployment site on Heroku.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+I have compaared both versions extensively and form what I can see There are no differences between local version and the live site deployed on Heroku.
 
 ## Credits
 
 ### Content
 
-All I Want For Christmas was created using the Task Manager Project by Tim Nelson (link below) as a basis and foundation for the code thata has then been edited, tweaked and changed for A.I.W.F.C.
+All I Want For Christmas was created using the Task Manager Project by Tim Nelson (link below) as a basis and foundation for the code that has then been edited, tweaked and changed for A.I.W.F.C.
 
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://traveltimn.github.io/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
 | [Chris Beams](https://chris.beams.io/posts/git-commit) | version control | "How to Write a Git Commit Message" |
 | [W3Schools](https://www.w3schools.com/howto/howto_js_topnav_responsive.asp) | entire site | responsive HTML/CSS/JS navbar |
-| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | contact page | interactive pop-up (modal) |
+| [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp) | modal instructions | defensive programming (modal) |
 | [Flexbox Froggy](https://flexboxfroggy.com/) | entire site | modern responsive layouts |
 | [Task Manager](https://github.com/TravelTimN/flask-task-manager-project)| html / css / JS / Python | Used the project as a foundation for All I want For Christmas |
 
 ### Media
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-Use this space to provide attribution links to any images, videos, or audio files borrowed from online.
-A few examples have been provided below to give you some ideas.
-
-If you're the owner (or a close acquaintance) of all media files, then make sure to specify this.
-Let the assessors know that you have explicit rights to use the media files within your project.
-
-Ideally, you should provide an actual link to every media file used, not just a generic link to the main site!
-The list below is by no means exhaustive. Within the Code Institute Slack community, you can find more "free media" links
-by sending yourself the following command: `!freemedia`.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
-
-
-
+| [Flaticon](https://www.flaticon.com/free-icon/gift_1151684) | entire site | image | favicon on all pages |
+| [PNGBuy](https://pngbuy.com/Download/santa-hat-clipart-2/) | entire site | image | santa hat image used on logo |
 | [TinyPNG](https://tinypng.com) | entire site | image | tool for image compression |
+| [CleanPNG](https://pngbuy.com/Download/santa-hat-clipart-2/) | entire site | image | Christmas string lights used on all pages|
+| [Vecteezy](https://www.vecteezy.com/vector-art/3299083-head-santa-claus-character-of-merry-christmas) | entire site | image | Santa image used on welcome page|
+| [PNGTree](https://pngtree.com/free-png-vectors/frozen-water-block) | entire site | image | Snow image used on profile page|
 
 ### Acknowledgements
 
