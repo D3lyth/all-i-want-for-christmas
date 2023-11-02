@@ -10,41 +10,15 @@ The site has been tested manually and using validators/linters to ensure that it
 
 I have used the recommended [HTML W3C Validator](https://validator.w3.org) to validate all of my HTML files.
 
-
-
-🛑🛑🛑🛑🛑 NEED TO CHANGE LINKS AND TEST 🛑🛑🛑🛑🛑
-
 | Page | W3C URL | Screenshot | Notes |
 | --- | --- | --- | --- |
-| Base Page | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FD3lyth.github.io%2Fall-i-want-for-christmas%2Findex.html) | ![screenshot](documentation/html-validation-home.png) | Section lacks header h2-h6 warning |
-| Welcome | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FD3lyth.github.io%2Fall-i-want-for-christmas%2Fcontact.html) | ![screenshot](documentation/html-validation-contact.png) | obsolete iframe warnings |
-| Register Page | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2FD3lyth.github.io%2Fall-i-want-for-christmas%2Fquiz.html) | ![screenshot](documentation/html-validation-quiz.png) | Pass: No Errors |
-| Profile Login Page | n/a | ![screenshot](documentation/html-validation-add-blog.png) | Duplicate IDs found, and fixed |
-| Profile Page | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
-| All Gift - List Page | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
-| Add Gift Page | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
-| Edit Gift Page | n/a | ![screenshot](documentation/html-validation-checkout.png) | Pass: No Errors |
-
-**IMPORTANT**: Python/Jinja syntax in HTML
-
-Python projects that use Jinja syntax, such as `{% for loops %}`, `{% url 'home' %}`, and `{{ variable|filter }}`
-will not validate properly if you're copying/pasting into the HTML validator.
-
-In order to properly validate these types of files, it's recommended to
-[validate by uri](https://validator.w3.org/#validate_by_uri) from the deployed Heroku pages.
-
-Unfortunately, pages that require a user to be logged-in and authenticated (CRUD functionality),
-will not work using this method, due to the fact that the HTML Validator (W3C) doesn't have
-access to login to your pages.
-In order to properly validate HTML pages with Jinja syntax for authenticated pages, follow these steps:
-
-- Navigate to the deployed pages which require authentication
-- Right-click anywhere on the page, and select **View Page Source** (usually `CTRL+U` or `⌘+U` on Mac).
-- This will display the entire "compiled" code, without any Jinja syntax.
-- Copy everything, and use the [validate by input](https://validator.w3.org/#validate_by_input) method.
-- Repeat this process for every page that requires a user to be logged-in/authenticated.
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
+| Welcome | [W3C](.........) | ![screenshot](documentation/html-validation-welcome.png) | ...... |
+| Register Page | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fall-i-want-for-christmas-11c6c44413ce.herokuapp.com%2Fregister) | ![screenshot](documentation/html-validation-register.png) | Section lacks header h2-h6 warning |
+| Profile Login Page | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fall-i-want-for-christmas-11c6c44413ce.herokuapp.com%2Fprofile_login) | ![screenshot](documentation/html-validation-profilelogin.png) | Section lacks header h2-h6 warning |
+| Profile Page | n/a | ![screenshot](documentation/html-validation-profile.png) | Section lacks header h2-h6 warning |
+| All Gifts - List Page | n/a | ![screenshot](documentation/html-validation-allgifts.png) | Section lacks header h2-h6 warning |
+| Add Gift Page | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fall-i-want-for-christmas-11c6c44413ce.herokuapp.com%2Fadd_gift) | ![screenshot](documentation/html-validation-addgift.png) | Section lacks header h2-h6 warning |
+| Edit Gift Page | n/a | ![screenshot](documentation/html-validation-editgift.png) | Section lacks header h2-h6 warning |
 
 ### CSS
 
@@ -179,9 +153,11 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | Page | User Action | Expected Result | Pass/Fail | Comments |
 | --- | --- | --- | --- | --- |
-| Home Page | | | | |
+| Welcome Page | | | | |
 | | Click on Logo | Redirection to Home page | Pass | |
-| | Click on Home link in navbar | Redirection to Home page | Pass | |
+| | Click on Profile link in navbar | Redirection to Profile page | Pass | |
+| | Click on Profile link in sidebar | Redirection to Profile page | Pass | |
+| | Click on Register link in navbar | Redirection to Register page | Pass | |
 | Gallery Page | | | | |
 | | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
 | | Load gallery images | All images load as expected | Pass | |
