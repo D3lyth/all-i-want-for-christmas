@@ -1,3 +1,4 @@
+/* jshint esversion: 11 */
 // Countdown Timer
 
 function updateCountdown() {

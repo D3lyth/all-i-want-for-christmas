@@ -1,3 +1,6 @@
+
+/* jshint esversion: 11 */
+
 /*
     vanilla JavaScript for MaterializeCSS initialization
 */
