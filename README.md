@@ -81,15 +81,7 @@ Google fonts was used for various fonts throughout the app.
 
 ## Wireframes
 
-⚠️⚠️⚠️⚠️⚠️ START OF NOTES (to be deleted) ⚠️⚠️⚠️⚠️⚠️
-
-In this section, display your wireframe screenshots using a Markdown `table`.
-
-Instructions on how to do Markdown `tables` start on line #213 on this site: <https://pandao.github.io/editor.md/en.html>
-
-🛑🛑🛑🛑🛑 END OF NOTES (to be deleted) 🛑🛑🛑🛑🛑
-
-To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+To follow best practice, wireframes were developed for mobile and desktop sizes.
 I've used [GoodNotes](https://www.goodnotes.com) iPad and Apple pencil to design my site wireframes by hand as I enjoy the process.
 
 ### Welcome Page Wireframes
@@ -105,13 +97,13 @@ Both register and login pages look the same except for the title of the page and
 
 | Size | Screenshot |
 | --- | --- |
-| Desktop | ![screenshot](documentation/wireframes/desktop-profile.jpg) |
+| Desktop | ![screenshot](documentation/wireframes/desktop-register.jpg) |
 
 ### Profile Page Wireframes
 
 | Size | Screenshot |
 | --- | --- |
-| Mobile | ![screenshot](documentation/wireframes/mobile-profile.png) |
+| Mobile | ![screenshot](documentation/wireframes/mobile-profile.jpg) |
 | Desktop | ![screenshot](documentation/wireframes/desktop-profile.jpg) |
 
 ### Add / Edit Gift Page Wireframes
