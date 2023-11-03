@@ -33,7 +33,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate b
 
 | File | Screenshot | Notes |
 | --- | --- | --- |
-| script.js | ![screenshot](documentation/js-validation-script.png) | Unused variables from external files (Materialize)|
+| script.js | ![screenshot](documentation/js-validation-script.png)| Unused variables from external files (Materialize)|
 | countdown.js | ![screenshot](documentation/js-validation-countdown.png) | Pass: No Errors |
 
 ### Python
