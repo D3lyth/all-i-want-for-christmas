@@ -17,6 +17,31 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+function markAsBought(button) {
+    // Get the item ID from the button's data-item-id attribute
+    const itemID = button.getAttribute('data-item-id');
+
+    // Send a request to update the item's status as bought
+    fetch(`/markAsBought/${itemID}`, { method: 'POST' })
+        .then(response => {
+            if (response.ok) {
+                // Handle the response 
+                return response.json(); 
+            } else {
+                // Handle the error
+                throw new Error('Failed to mark item as bought');
+            }
+        })
+        .then(data => {
+            // Handle the data from the response
+            console.log('Item marked as bought:', data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+
 document.addEventListener("DOMContentLoaded", function () {
     // Add event listeners for "GOT IT!" buttons
     const markAsBoughtButtons = document.querySelectorAll(".btn-small.light-green");
